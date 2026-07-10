@@ -1,0 +1,16 @@
+from pydantic import BaseModel, EmailStr
+
+
+class ParentCreate(BaseModel):
+    email: EmailStr
+    password: str
+
+
+class ParentResponse(BaseModel):
+    id: int
+    email: EmailStr
+    email_verified: bool
+    is_active: bool
+
+    class Config:
+        from_attributes = True
