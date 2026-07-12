@@ -1,9 +1,33 @@
+# =========================
+# Python
+# =========================
 venv/
 .venv/
 __pycache__/
 *.py[cod]
+
+# Environment
 .env
+.env.*
+
+# Database
 *.db
 *.sqlite
 *.sqlite3
+
+# VS Code
 .vscode/
+
+# =========================
+# Next.js / React
+# =========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
