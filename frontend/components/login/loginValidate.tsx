@@ -1,49 +1,63 @@
+// loginValidate.ts
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { AUTH_ENDPOINTS } from '@/lib/appConfig';
+import { saveToken } from '@/lib/tokenStorage';
 
 const validationSchema = Yup.object().shape({
-
-    email: Yup.string().email("email format is not correct").required("please enter your email"),
-    password: Yup.string().min(8, "password must be at least 8 characters long").required("please enter your password")
-
+  email: Yup.string().email("email format is not correct").required("please enter your email"),
+  password: Yup.string().min(8, "password must be at least 8 characters long").required("please enter your password")
 })
 
 export type LoginValues = {
-
-    email: string,
-    password: string
+  email: string,
+  password: string
 }
 
-const initialValues : LoginValues = {
-
-    email: "",
-    password: ""
-  }
-
+const initialValues: LoginValues = {
+  email: "",
+  password: ""
+}
 
 export const useContactLogin = () => {
+  const router = useRouter();
+  const [serverError, setServerError] = useState<string | null>(null);
 
   const formik = useFormik<LoginValues>({
-
     initialValues: initialValues,
     validationSchema: validationSchema,
 
-    onSubmit:() => {
-
+    onSubmit: async (values, { setSubmitting }) => {
+      setServerError(null);
       try {
-        formik.resetForm()
-        console.log("success")
-      }
+        const res = await fetch(AUTH_ENDPOINTS.login, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        });
 
-      catch (error) {
-        console.error("Submission error:", error)
-      }
+        const data = await res.json();
 
+        if (!res.ok) {
+          setServerError(data.detail || "خطایی رخ داد");
+          setSubmitting(false);
+          return;
+        }
+
+        saveToken(data.access_token);
+        router.push("/");
+      } catch (error) {
+        console.error("Submission error:", error);
+        setServerError("خطا در اتصال به سرور. مطمئن شو بک‌اند در حال اجراست.");
+        setSubmitting(false);
+      }
     },
   })
 
   return {
-    formik
+    formik,
+    serverError,
   }
-
 }
