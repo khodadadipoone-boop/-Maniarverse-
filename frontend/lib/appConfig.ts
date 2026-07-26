@@ -4,7 +4,6 @@
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 export const AUTH_ENDPOINTS = {
-  register: `${API_BASE_URL}/auth/register`,
-  login: `${API_BASE_URL}/auth/login`,
-  verifyEmail: `${API_BASE_URL}/auth/verify-email`,
+  register: `${API_BASE_URL}/parent/register`,
+  verifyEmail: `${API_BASE_URL}/parent/verify-email`,
 };

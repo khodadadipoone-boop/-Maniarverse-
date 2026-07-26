@@ -42,9 +42,12 @@ def register_parent(
     db: Session = Depends(get_db),
 ) -> Parent:
     """Register a new parent account."""
+    normalized_email=str(
+        parent_data.email
+    ).strip().lower()
 
     existing_parent = db.scalar(
-        select(Parent).where(Parent.email == str(parent_data.email))
+        select(Parent).where(Parent.email == normalized_email)
     )
 
     if existing_parent:
@@ -54,15 +57,20 @@ def register_parent(
         )
 
     new_parent = Parent(
-        email=str(parent_data.email),
+        email=normalized_email,
         password_hash=hash_password(parent_data.password),
         email_verified=False,
         is_active=True,
     )
 
     db.add(new_parent)
-    db.commit()
-    db.refresh(new_parent)
+    try:
+        db.commit()
+        db.refresh(new_parent)
+    except Exception:
+        db.rollback()
+        raise
+
     verification_token = create_email_verification_token(
     parent_id=new_parent.id
     )
@@ -130,10 +138,13 @@ def login_parent(
     db: Session = Depends(get_db),
 ) -> TokenResponse:
     """Authenticate a parent and return a JWT access token."""
+    normalized_email=str(
+        login_data.email
+    ).strip().lower()
 
     parent = db.scalar(
         select(Parent).where(
-            Parent.email == str(login_data.email)
+            Parent.email == normalized_email
         )
     )
 
@@ -156,6 +167,11 @@ def login_parent(
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="This account is inactive.",
+        )
+    if not parent.email_verified:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Please verify your email before logging in.",
         )
 
     access_token = create_access_token(
