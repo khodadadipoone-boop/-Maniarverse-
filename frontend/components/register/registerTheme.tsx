@@ -1,10 +1,8 @@
-// RegisterTheme.tsx
 import { HiUserPlus } from "react-icons/hi2"
-import RegisterForm from "./registerForm";
+import RegisterForm from "./registerForm"
 
 
 const RegisterTheme = () => {
-
 
     return(
         <>
