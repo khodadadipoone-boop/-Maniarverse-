@@ -56,53 +56,54 @@ def send_verification_email(recipient_email:str,verification_token:str)->None:
             """,
         }
     )
-'''
-import os
-from urllib.parse import quote
-import resend
-from dotenv import load_dotenv
+#----------------------------------------------------------------------------
 
-
-load_dotenv()
-
-resend.api_key=os.getenv("RESEND_API_KEY")
-
-EMAIL_FROM=os.getenv(
-    "EMAIL_FROM",
-    "Maniyarverse <onboarding@resend.dev>"
-)
-
-FRONTEND_VERIFY_URL = os.getenv(
-    "FRONTEND_VERIFY_URL",
-    "http://localhost:3000/verify-email",
-)
-
-
-def send_verification_email(recipient_email: str, verification_token: str) -> None:
-    encoded_token=quote(
-        verification_token,
-        safe=""
+def send_password_reset_email(
+    recipient_email: str,
+    reset_token: str,
+) -> None:
+    encoded_token = quote(
+        reset_token,
+        safe="",
     )
-    verification_link=(
-        f"{FRONTEND_VERIFY_URL}"
-        f"?tokrn={encoded_token}"
+
+    reset_url = (
+        f"{setting.frontend_reset_password_url}"
+        f"?token={encoded_token}"
     )
-    resend.Emails.send({
-        "from":EMAIL_FROM,
-        "to":[recipient_email],
-        "subject":"Verify Your Email",
-        "html":f"""
-        <h2>Verify your email</h2>
-        <p>Click the link below to verify your account:</p>
-        <p>
-            <a href="{verification_link}">
-                    Verify email
-                </a>
-        </p>
-        <p>
-                This link expires in 30 minutes.
-            </p>
-        """,
-    }
+
+    resend.Emails.send(
+        {
+            "from": setting.email_from,
+            "to": [recipient_email],
+            "subject": "Reset your password",
+            "html": f"""
+                <h2>Reset your password</h2>
+
+                <p>
+                    We received a request to reset your password.
+                </p>
+
+                <p>
+                    <a href="{reset_url}">
+                        Reset Password
+                    </a>
+                </p>
+
+                <p>
+                    If the button does not work, copy this link:
+                </p>
+
+                <p>{reset_url}</p>
+
+                <p>
+                    This link will expire in 15 minutes.
+                </p>
+
+                <p>
+                    If you did not request a password reset,
+                    you can ignore this email.
+                </p>
+            """,
+        }
     )
-    '''

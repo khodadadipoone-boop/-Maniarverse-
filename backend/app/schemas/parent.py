@@ -12,40 +12,23 @@ class ParentResponse(ParentBase):
     is_active:bool
     class Config:
         from_attributes=True
+        
+class ParetLogin(ParentBase):
+    password:str
 
-class Token(BaseModel):
+class TokenResponse(BaseModel):
     access_token:str
     token_type:str
 
 class MessageResponse(BaseModel):
     message:str
-'''
-from pydantic import BaseModel, EmailStr
 
+class ResendVerificationRequest(ParentBase):
+    pass
 
-class ParentCreate(BaseModel):
-    email: EmailStr
-    password: str
+class ForgotPasswordRequest(ParentBase):
+    pass
 
-class ParentLogin(BaseModel):
-    email: EmailStr
-    password: str
-
-
-class ParentResponse(BaseModel):
-    id: int
-    email: EmailStr
-    email_verified: bool
-    is_active: bool
-
-    class Config:
-        from_attributes = True
-
-
-class TokenResponse(BaseModel):
-    access_token: str
-    token_type: str
-
-class MessageResponse(BaseModel):
-    message: str
-    '''
+class ResetPasswordRequest(BaseModel):
+    token:str
+    new_password:str

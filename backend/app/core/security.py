@@ -9,9 +9,11 @@ oauth2_scheme=OAuth2PasswordBearer(tokenUrl="api/users/token")
 
 def hash_password(password:str):
     return password_hash.hash(password)
+#----------------------------------------------------------------------------
 
 def verify_password(plain_password:str,hashed_password)->bool:
-    return password_hash.verify(plain_password,hash_password)
+    return password_hash.verify(plain_password,hashed_password)
+#----------------------------------------------------------------------------
 
 def create_access_token(data:dict,expires_delta:timedelta | None=None) -> str:
     to_encode=data.copy()
@@ -28,10 +30,11 @@ def create_access_token(data:dict,expires_delta:timedelta | None=None) -> str:
         algorithm=setting.algorithm
     )
     return encoded_jwt
+#------------------------------------------------------------------------------
 
 def verify_access_token(token: str) -> str | None:
     try:
-        pyload=jwt.decode(
+        payload=jwt.decode(
             token,
             setting.secret_key.get_secret_value(),
             algorithms=[setting.algorithm],
@@ -40,134 +43,68 @@ def verify_access_token(token: str) -> str | None:
     except jwt.InvalidTokenError:
         return None
     else: 
-        return pyload.get("sub")
+        return payload.get("sub")
+#---------------------------------------------------------------------------------
 
 def create_email_verification_token(parent_id:int)->str:
     expires_at=datetime.now(UTC)+timedelta(
         minutes=setting.email_verification_expire_minutes
     )
-    pyload={
+    payload={
         "sub":str(parent_id),
         "purpose": "email_verification",
         "exp": expires_at,
     }
     encoded_jwt=jwt.encode(
-        pyload,
+        payload,
         setting.secret_key.get_secret_value(),
         algorithm=setting.algorithm
     )
     return encoded_jwt
+#------------------------------------------------------------------
 
 def decode_email_verification_token(token:str)->int:
-    pyload=jwt.decode(
+    payload=jwt.decode(
         token,
         setting.secret_key.get_secret_value(),
         algorithms=[setting.algorithm],
     )
-    if pyload.get("purpose") != "email_verification":
+    if payload.get("purpose") != "email_verification":
         raise jwt.InvalidTokenError("Invalid token purpose.")
-    parent_id=pyload.get("sub")
+    parent_id=payload.get("sub")
     if parent_id is None:
         raise jwt.InvalidTokenErro("Token subject is missing.")
     return int(parent_id)
-'''
-import os
-from datetime import datetime, timedelta, timezone
+#--------------------------------------------------------------------------------
 
-import jwt
-from dotenv import load_dotenv
-from pwdlib import PasswordHash
-
-load_dotenv()
-
-password_hash = PasswordHash.recommended()
-
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = "HS256"
-
-ACCESS_TOKEN_EXPIRE_MINUTES = int(
-    os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30")
-)
-
-EMAIL_VERIFICATION_EXPIRE_MINUTES = int(
-    os.getenv("EMAIL_VERIFICATION_EXPIRE_MINUTES", "30")
-)
-
-if not SECRET_KEY:
-    raise RuntimeError("SECRET_KEY is not configured.")
-
-
-def hash_password(password: str) -> str:
-    """Return a secure hash for a plain-text password."""
-    return password_hash.hash(password)
-
-
-def verify_password(
-    plain_password: str,
-    hashed_password: str,
-) -> bool:
-    """Verify a plain-text password against its hash."""
-    return password_hash.verify(
-        plain_password,
-        hashed_password,
-    )
-
-
-def create_access_token(subject: str) -> str:
-    """Create a JWT access token."""
-
-    expires_at = datetime.now(timezone.utc) + timedelta(
-        minutes=ACCESS_TOKEN_EXPIRE_MINUTES
-    )
-
-    payload = {
-        "sub": subject,
-        "exp": expires_at,
-    }
-
-    return jwt.encode(
-        payload,
-        SECRET_KEY,
-        algorithm=ALGORITHM,
-    )
-
-
-def create_email_verification_token(parent_id: int) -> str:
-    """Create a short-lived token for email verification."""
-
-    expires_at = datetime.now(timezone.utc) + timedelta(
-        minutes=EMAIL_VERIFICATION_EXPIRE_MINUTES
-    )
-
+def create_password_reset_token(parent_id:str,expire_minutes:int=15)->str:
+    expire=datetime.now(UTC)+timedelta(minutes=expire_minutes)
     payload = {
         "sub": str(parent_id),
-        "purpose": "email_verification",
-        "exp": expires_at,
+        "type": "password_reset",
+        "exp": expire,
     }
-
-    return jwt.encode(
+    token = jwt.encode(
         payload,
-        SECRET_KEY,
-        algorithm=ALGORITHM,
+        setting.secret_key.get_secret_value(),
+        algorithm=setting.algorithm
     )
 
+    return token
+#-------------------------------------------------------------------------------
 
-def decode_email_verification_token(token: str) -> int:
-    """Validate an email verification token and return the parent ID."""
-
+def decode_password_reset_token(token:str)->int:
     payload = jwt.decode(
         token,
-        SECRET_KEY,
-        algorithms=[ALGORITHM],
+        setting.SECRET_KEY,
+        algorithms=[setting.ALGORITHM],
     )
-
-    if payload.get("purpose") != "email_verification":
-        raise jwt.InvalidTokenError("Invalid token purpose.")
-
+    if payload.get("type") != "password_reset":
+        raise jwt.InvalidTokenError("Invalid token type")
     parent_id = payload.get("sub")
-
     if parent_id is None:
-        raise jwt.InvalidTokenError("Token subject is missing.")
-
-    return int(parent_id)
-    '''
+        raise jwt.InvalidTokenError("Missing subject")
+    try:
+        return int(parent_id)
+    except (TypeError, ValueError):
+        raise jwt.InvalidTokenError("Invalid subject")
