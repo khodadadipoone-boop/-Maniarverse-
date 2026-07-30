@@ -1,7 +1,7 @@
-// loginForm.tsx
 "use client";
 
 import { useState } from "react"
+import Link from "next/link"
 
 import { FaEye } from "react-icons/fa"
 import { BiHide } from "react-icons/bi"
@@ -44,7 +44,7 @@ const LoginForm = () => {
                         <div className="flex items-center justify-between">
                             <label htmlFor="password" className="block text-sm/6 font-semibold text-gray-700">Password</label>
                             <div className="text-sm">
-                                <a href="#" className="font-semibold text-teal-600 hover:text-teal-800">Forget Password?</a>
+                                <Link href="/forgot-password" className="font-semibold text-teal-600 hover:text-teal-800">Forget Password?</Link>
                             </div>
                         </div>
 

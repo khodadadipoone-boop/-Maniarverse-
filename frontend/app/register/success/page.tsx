@@ -117,7 +117,7 @@ const RegisterSuccessPage = () => {
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-sm text-center">
           {secondsLeft > 0 ? (
             <p className="text-xs text-gray-400">
-              Didn&apos;t receive the email? You can resend it in{" "}
+              Didn&apos;t receive the email? Resend it in{" "}
               <span className="font-semibold text-gray-500">{secondsLeft}s</span>
             </p>
           ) : (
