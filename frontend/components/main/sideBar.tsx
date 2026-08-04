@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiChevronUpDown } from "react-icons/hi2";
 import { items } from "@/components/header/navData";
+import ProfileMenu from "./profileMenu";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -43,25 +43,7 @@ const Sidebar = () => {
         })}
       </nav>
 
-      <div className="border-t border-slate-100 p-2 md:p-3">
-        <button
-          type="button"
-          aria-label="User profile"
-          className="flex w-full items-center justify-center gap-3 rounded-xl px-2 py-2.5 transition-colors hover:bg-slate-50 md:justify-start md:px-3 md:text-left"
-        >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-100 text-lg">
-            👩
-          </div>
-          <div className="hidden min-w-0 flex-1 md:block">
-            <p className="truncate text-sm font-bold text-slate-800">Sarah</p>
-            <p className="text-xs text-slate-500">Parent</p>
-          </div>
-          <HiChevronUpDown
-            size={18}
-            className="hidden shrink-0 text-slate-400 md:block"
-          />
-        </button>
-      </div>
+      <ProfileMenu />
     </aside>
   );
 };
