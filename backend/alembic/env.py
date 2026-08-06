@@ -5,7 +5,8 @@ from sqlalchemy import pool
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from app.db.database import Base
-from app.models.parent import Parent 
+from app.models.parent import Parent
+from app.models.child import Child
 
 
 config = context.config

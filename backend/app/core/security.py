@@ -27,7 +27,7 @@ def create_access_token(data:dict,expires_delta:timedelta | None=None) -> str:
     encoded_jwt=jwt.encode(
         to_encode,
         setting.secret_key.get_secret_value(),
-        algorithm=setting.algorithm
+        algorithm=setting.algorithm,
     )
     return encoded_jwt
 #------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ def create_email_verification_token(parent_id:int)->str:
     encoded_jwt=jwt.encode(
         payload,
         setting.secret_key.get_secret_value(),
-        algorithm=setting.algorithm
+        algorithm=setting.algorithm,
     )
     return encoded_jwt
 #------------------------------------------------------------------
@@ -87,24 +87,32 @@ def create_password_reset_token(parent_id:str,expire_minutes:int=15)->str:
     token = jwt.encode(
         payload,
         setting.secret_key.get_secret_value(),
-        algorithm=setting.algorithm
+        algorithm=setting.algorithm,
     )
 
     return token
 #-------------------------------------------------------------------------------
 
-def decode_password_reset_token(token:str)->int:
-    payload = jwt.decode(
-        token,
-        setting.SECRET_KEY,
-        algorithms=[setting.ALGORITHM],
-    )
+def decode_password_reset_token(token: str) -> int:
+    try:
+        payload = jwt.decode(
+            token,
+            setting.secret_key.get_secret_value(),
+            algorithms=[setting.algorithm],
+        )
+
+        print("PAYLOAD:", payload)
+
+    except Exception as e:
+        print("JWT ERROR:", type(e).__name__, str(e))
+        raise
+
     if payload.get("type") != "password_reset":
         raise jwt.InvalidTokenError("Invalid token type")
+
     parent_id = payload.get("sub")
+
     if parent_id is None:
         raise jwt.InvalidTokenError("Missing subject")
-    try:
-        return int(parent_id)
-    except (TypeError, ValueError):
-        raise jwt.InvalidTokenError("Invalid subject")
+
+    return int(parent_id)

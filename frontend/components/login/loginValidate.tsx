@@ -47,7 +47,7 @@ export const useContactLogin = () => {
         }
 
         saveToken(data.access_token);
-        router.push("/");
+        router.replace("/dashboard");
       } catch (error) {
         console.error("Submission error:", error);
         setServerError("خطا در اتصال به سرور. مطمئن شو بک‌اند در حال اجراست.");

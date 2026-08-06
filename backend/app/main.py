@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from app.routers import home,parent
+from app.routers import home,parent,child
 from app.db.database import engine,Base
 
 @asynccontextmanager
@@ -26,7 +26,7 @@ app.add_middleware(
 
 app.include_router(home.router,prefix="/home",tags=["home"])
 app.include_router(parent.router,prefix="/parent",tags=["parent"])
-
+app.include_router(child.router,prefix="/child",tags=["child"])
 
 
 
