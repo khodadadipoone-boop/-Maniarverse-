@@ -81,7 +81,7 @@ const ChildrenRow = () => {
           className="flex flex-col items-center gap-2"
           aria-label="Add a child"
         >
-          <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-dashed border-slate-300 text-slate-400 transition-colors hover:border-blue-400 hover:text-blue-500">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-dashed cursor-pointer border-slate-300 text-slate-400 transition-colors hover:border-blue-400 hover:text-blue-500">
             <HiPlus size={24} />
           </div>
           <span className="text-xs font-semibold text-slate-500">Add</span>

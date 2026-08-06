@@ -37,7 +37,7 @@ const DashboardHeader = () => {
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <button
             type="button"
-            className="relative rounded-xl bg-white p-2 text-slate-600 shadow-sm ring-1 ring-slate-200 transition-colors hover:bg-slate-50 sm:p-2.5"
+            className="relative rounded-xl cursor-pointer bg-white p-2 text-slate-600 shadow-sm ring-1 ring-slate-200 transition-colors hover:bg-slate-50 sm:p-2.5"
             aria-label="Notifications"
           >
             <HiOutlineBell size={22} />
@@ -49,7 +49,7 @@ const DashboardHeader = () => {
           <button
             type="button"
             onClick={() => setIsModalOpen(true)}
-            className="rounded-xl bg-blue-600 px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-700 sm:px-4 sm:py-2.5 sm:text-sm"
+            className="rounded-xl bg-blue-600 px-3 py-2 text-xs cursor-pointer font-semibold text-white transition-colors hover:bg-blue-700 sm:px-4 sm:py-2.5 sm:text-sm"
           >
             + Add child
           </button>
