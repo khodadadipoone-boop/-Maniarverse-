@@ -13,7 +13,7 @@ class ChildBase(BaseModel):
 
 
 class ChildCreate(ChildBase):
-    parent_id: int
+    pass
 
 
 class ChildUpdate(BaseModel):

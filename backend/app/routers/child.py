@@ -16,6 +16,7 @@ from app.schemas.child import (
     ChildUpdate,
 )
 from app.schemas.parent import MessageResponse
+from app.core.dependencies import get_current_parent
 
 
 router = APIRouter()
@@ -27,18 +28,8 @@ router = APIRouter()
 async def create_child(
     child_data: ChildCreate,
     db: AsyncSession = Depends(get_db),
+    current_parent: Parent = Depends(get_current_parent),
 ) -> Child:
-    parent = await db.get(
-        Parent,
-        child_data.parent_id,
-    )
-
-    if parent is None:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Parent not found.",
-        )
-
     child_name = child_data.name.strip()
 
     if not child_name:
@@ -48,7 +39,7 @@ async def create_child(
         )
 
     new_child = Child(
-        parent_id=child_data.parent_id,
+        parent_id=current_parent.id,
         name=child_name,
         birth_date=child_data.birth_date,
         avatar_url=child_data.avatar_url,
@@ -69,3 +60,22 @@ async def create_child(
         )
 
     return new_child
+#-------------------------------------------------------------------------
+
+@router.get(
+    "",
+    response_model=list[ChildResponse],
+    status_code=status.HTTP_200_OK,
+)
+async def get_children(
+    db: AsyncSession = Depends(get_db),
+    current_parent: Parent = Depends(get_current_parent),
+) -> list[Child]:
+
+    result = await db.scalars(
+        select(Child)
+        .where(Child.parent_id == current_parent.id)
+        .order_by(Child.created_at.desc())
+    )
+
+    return list(result.all())

@@ -17,7 +17,7 @@ if config.config_file_name is not None:
 
 config.set_main_option(
     "sqlalchemy.url",
-    "sqlite+aiosqlite:///./maniyarverse.db",
+    "sqlite+aiosqlite:///./maniarverse.db",
 )
 
 target_metadata = Base.metadata
