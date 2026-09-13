@@ -3,20 +3,10 @@
 
 import { useState } from "react";
 import { AVATARS } from "./../../avatars/Avatars";
-import { CHILD_ENDPOINTS } from "@/lib/appConfig";
-import { getParentId } from "@/lib/tokenStorage"
-
-export interface ChildResponse {
-  id: number;
-  parent_id: number;
-  name: string;
-  birth_date: string | null;
-  avatar_url: string | null;
-  created_at: string;
-}
+import type { ChildCreateInput } from "@/components/main/Data";
 
 interface AddChildFormProps {
-  onSave: (data: ChildResponse) => void;
+  onSave: (data: ChildCreateInput) => Promise<void>;
 }
 
 const AddChildForm = ({ onSave }: AddChildFormProps) => {
@@ -30,51 +20,25 @@ const AddChildForm = ({ onSave }: AddChildFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-
-    const parentId = getParentId();
-
-    if (!parentId) {
-      setError("Could not identify logged-in user. Please log in again.");
-      return;
-    }
-
     setSubmitting(true);
 
     try {
-      const res = await fetch(CHILD_ENDPOINTS.addChild, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          parent_id: parentId,
-          name: name.trim(),
-          birth_date: birthDate || null,
-          avatar_url: avatarId,
-        }),
+      await onSave({
+        name: name.trim(),
+        birth_date: birthDate || null,
+        avatar_url: avatarId,
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        const message = Array.isArray(data.detail)
-          ? data.detail.map((item: { msg: string }) => item.msg).join(" | ")
-          : typeof data.detail === "string"
-          ? data.detail
-          : "Failed to add child.";
-
-        setError(message);
-        setSubmitting(false);
-        return;
-      }
-
-      onSave(data as ChildResponse);
-
-      // ریست کردن فرم بعد از موفقیت
       setName("");
       setBirthDate("");
       setAvatarId(AVATARS[0].id);
     } catch (err) {
       console.error("Add child error:", err);
-      setError("Could not connect to the server. Please try again later.");
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Could not connect to the server. Please try again later."
+      );
     } finally {
       setSubmitting(false);
     }
@@ -148,7 +112,7 @@ const AddChildForm = ({ onSave }: AddChildFormProps) => {
         disabled={submitting}
         className="mt-2 w-full rounded-xl bg-linear-to-r from-teal-500 to-cyan-500 py-2.5 font-bold text-white hover:from-teal-600 hover:to-cyan-600 transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {submitting ? "sending..." : "send"}
+        {submitting ? "Adding..." : "Add child"}
       </button>
     </form>
   );

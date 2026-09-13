@@ -5,6 +5,7 @@ import { HiOutlineBell } from "react-icons/hi2";
 import Modal from "@/components/main/modal/modal";
 import AddChildForm from "@/components/main/modal/addChildForm";
 import { useChildrenContext } from "@/components/main/childrenContext";
+import type { ChildCreateInput } from "@/components/main/Data";
 
 const getGreeting = () => {
   const hour = new Date().getHours();
@@ -17,8 +18,8 @@ const DashboardHeader = () => {
   const { handleAddChild } = useChildrenContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSaveChild = (data: Parameters<typeof handleAddChild>[0]) => {
-    handleAddChild(data);
+  const handleSaveChild = async (data: ChildCreateInput) => {
+    await handleAddChild(data);
     setIsModalOpen(false);
   };
 

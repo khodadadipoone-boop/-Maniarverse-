@@ -11,7 +11,7 @@ export const AUTH_ENDPOINTS = {
   resetPassword: `${API_BASE_URL}/parent/reset-password`,
 };
 
-// TODO: مسیر prefix این router رو با بک‌اند دولوپر چک کن (فرض شده "/child" باشه)
 export const CHILD_ENDPOINTS = {
-  addChild: `${API_BASE_URL}/child/add`,
+  add: `${API_BASE_URL}/child/add`,
+  list: `${API_BASE_URL}/child`,
 };

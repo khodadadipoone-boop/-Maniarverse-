@@ -6,14 +6,15 @@ import { AVATARS } from "@/components/avatars/Avatars";
 import Modal from "@/components/main/modal/modal";
 import AddChildForm from "@/components/main/modal/addChildForm";
 import { useChildrenContext } from "@/components/main/childrenContext";
+import type { ChildCreateInput } from "@/components/main/Data";
 
 const ChildrenRow = () => {
-  const { childrenList, activeId, setActiveId, handleAddChild } =
+  const { childrenList, activeId, setActiveId, handleAddChild, isLoading } =
     useChildrenContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSaveChild = (data: Parameters<typeof handleAddChild>[0]) => {
-    handleAddChild(data);
+  const handleSaveChild = async (data: ChildCreateInput) => {
+    await handleAddChild(data);
     setIsModalOpen(false);
   };
 
@@ -43,37 +44,39 @@ const ChildrenRow = () => {
           </span>
         </button>
 
-        {childrenList.map((child) => {
-          const avatar =
-            AVATARS.find((a) => a.id === child.avatarId) ?? AVATARS[0];
-          const isSelected = activeId === child.id;
+        {isLoading
+          ? null
+          : childrenList.map((child) => {
+              const avatar =
+                AVATARS.find((a) => a.id === child.avatar_url) ?? AVATARS[0];
+              const isSelected = activeId === child.id;
 
-          return (
-            <button
-              key={child.id}
-              type="button"
-              onClick={() => setActiveId(child.id)}
-              className="flex flex-col items-center gap-2"
-            >
-              <div
-                className={`flex h-16 w-16 items-center justify-center rounded-full text-3xl ${avatar.bg} transition-all ${
-                  isSelected
-                    ? "ring-2 ring-blue-500 ring-offset-2"
-                    : "hover:ring-2 hover:ring-slate-200 hover:ring-offset-2"
-                }`}
-              >
-                {avatar.emoji}
-              </div>
-              <span
-                className={`max-w-16 truncate text-xs font-semibold ${
-                  isSelected ? "text-blue-600" : "text-slate-600"
-                }`}
-              >
-                {child.name}
-              </span>
-            </button>
-          );
-        })}
+              return (
+                <button
+                  key={child.id}
+                  type="button"
+                  onClick={() => setActiveId(child.id)}
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div
+                    className={`flex h-16 w-16 items-center justify-center rounded-full text-3xl ${avatar.bg} transition-all ${
+                      isSelected
+                        ? "ring-2 ring-blue-500 ring-offset-2"
+                        : "hover:ring-2 hover:ring-slate-200 hover:ring-offset-2"
+                    }`}
+                  >
+                    {avatar.emoji}
+                  </div>
+                  <span
+                    className={`max-w-16 truncate text-xs font-semibold ${
+                      isSelected ? "text-blue-600" : "text-slate-600"
+                    }`}
+                  >
+                    {child.name}
+                  </span>
+                </button>
+              );
+            })}
 
         <button
           type="button"

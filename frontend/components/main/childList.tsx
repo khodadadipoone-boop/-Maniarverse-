@@ -5,14 +5,14 @@ import { useState } from "react";
 import { HiPlus } from "react-icons/hi2";
 import Modal from "./modal/modal";
 import AddChildForm from "./modal/addChildForm";
-import type { Child } from "./Data";
+import type { ActiveChildId, Child, ChildCreateInput } from "./Data";
 import { AVATARS } from "../avatars/Avatars";
 
 interface ChildListProps {
   childrenList: Child[];
-  activeId: string;
-  onSelect: (id: string) => void;
-  onAddChild: (data: Omit<Child, "id">) => void;
+  activeId: ActiveChildId;
+  onSelect: (id: ActiveChildId) => void;
+  onAddChild: (data: ChildCreateInput) => Promise<void>;
 }
 
 const ChildList = ({
@@ -23,8 +23,8 @@ const ChildList = ({
 }: ChildListProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSaveChild = (data: Omit<Child, "id">) => {
-    onAddChild(data);
+  const handleSaveChild = async (data: ChildCreateInput) => {
+    await onAddChild(data);
     setIsModalOpen(false);
   };
 
@@ -44,7 +44,7 @@ const ChildList = ({
 
         {childrenList.map((child) => {
           const avatar =
-            AVATARS.find((a) => a.id === child.avatarId) ?? AVATARS[0];
+            AVATARS.find((a) => a.id === child.avatar_url) ?? AVATARS[0];
           return (
             <button
               key={child.id}

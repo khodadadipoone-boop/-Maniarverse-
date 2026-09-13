@@ -1,31 +1,15 @@
-import Link from "next/link";
+import LandingHeader from "@/components/landing/landingHeader";
+import LandingHero from "@/components/landing/landingHero";
+import LandingFeatures from "@/components/landing/landingFeatures";
+import LandingStats from "@/components/landing/landingStats";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6">
-      <h1 className="text-4xl font-bold">
-        Welcome to Maniyarverse
-      </h1>
-
-      <p className="text-gray-600">
-        A safe and engaging world for children.
-      </p>
-
-      <div className="flex gap-4">
-        <Link
-          href="/login"
-          className="rounded-lg bg-blue-600 px-6 py-3 text-white"
-        >
-          Login
-        </Link>
-
-        <Link
-          href="/register"
-          className="rounded-lg border border-blue-600 px-6 py-3 text-blue-600"
-        >
-          Register
-        </Link>
-      </div>
-    </main>
+    <div className="min-h-screen bg-linear-to-b from-teal-50 to-cyan-50">
+      <LandingHeader />
+      <LandingHero />
+      <LandingFeatures />
+      <LandingStats />
+    </div>
   );
 }
