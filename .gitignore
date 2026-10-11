@@ -1,33 +1,34 @@
-# =========================
-# Python
-# =========================
-venv/
-.venv/
-__pycache__/
-*.py[cod]
-
-# Environment
+# secrets and env
 .env
-.env.*
+*.env
+.env.local
 
-# Database
+# databases
 *.db
-*.sqlite
 *.sqlite3
 
-# VS Code
-.vscode/
+# dependencies & builds
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
 
-# =========================
-# Next.js / React
-# =========================
-frontend/node_modules/
-frontend/.next/
-frontend/out/
+# private material: never commit
+child_psychology/
+outputs/
+contracts/
+finance/
+private/
+**/private/
 
-# Logs
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
+# audio and video (consultant recordings, child-related media)
+**/*.ogg
+**/*.mp3
+**/*.wav
+**/*.m4a
+**/*.mp4
+**/*.mov
+**/*.heic
