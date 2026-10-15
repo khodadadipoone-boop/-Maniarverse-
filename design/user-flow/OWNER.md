@@ -20,9 +20,13 @@ Artifacts located herein bridge psychological and clinical interaction principle
 
 | Artifact Name | Source Reference | Version | Status | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| `UserFlow_Parent_Section1_v1.0.pdf` | Figma Node `16:175` (`Section 1.pdf`) | `v1.0` | **Deprecated** | Initial parental authentication, OTP flow, child intake, and core metrics dashboard architecture. Superseded by v2.0. |
-| `UserFlow_Parent_Section1_v2.0.pdf` | Figma Board (`V2.pdf`) | `v2.0` | **Active** | Streamlined parental onboarding featuring updated child intake, profile selector, and the "Recently Experience" activity loop. |
+
+| `UserFlow_v1.0.pdf` | Figma Node `16:175` (`Section 1.pdf`) | `v1.0` | **Deprecated** | Initial parental authentication, OTP flow, child intake, and core metrics dashboard architecture. Superseded by v2.0. |
+
+| `UserFlow_v2.0.pdf` | Figma Board (`V2.pdf`) | `v2.0` | **Active** | Streamlined parental onboarding featuring updated child intake, profile selector, and the "Recently Experience" activity loop. |
+
 | `Sitemap_Maniarverse_v1.0.pdf` | Figma / Vector Export (`png2pdf.pdf`) | `v1.0` | **Deprecated** | Baseline end-to-end application sitemap mapping Splash, Auth, Parent Dashboard, Child Worlds, and Reporting Swimlanes. Superseded by v2.0. |
+
 | `Sitemap_Maniarverse_v2.0.pdf` | Figma Architecture Update | `v2.0` | **Active** | Refined structural hierarchy reflecting updated parental views, synchronized child world routing, and revised navigation topology. |
 
 ---
