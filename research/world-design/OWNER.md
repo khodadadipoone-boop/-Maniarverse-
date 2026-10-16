@@ -2,12 +2,12 @@
 
 ## Module Metadata
 - **Module Name:** World Design Guidelines & Sensory Framework
-- **Path:** `research/world-guidelines/`
+- **Path:**  `research/world-design/`
 - **Primary Subject Matter Expert:** Dr. Akhgari (Psychology & Behavioral Science Consultant)
 - **Reviewer / Technical Stakeholders:** UX/3D Design Team (Hadis Alidokht), Game Engine / Frontend Team
 - **Contract Reference:** Phase 1 Deliverables (Common Principles of World Design)
 - **Status:** Approved / Active Baseline (v1.0)
-- **Last Updated:** 2026-10-14
+- **Last Updated:** 2026-10-16
 
 ---
 
@@ -21,6 +21,7 @@ This directory establishes the definitive sensory, environmental, and behavioral
 | Asset Name | Format | Author / Contributor | Status | Last Updated | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `World_Design_Guidelines_DrAkhgari_v1.0.docx` | DOCX | Dr. Akhgari | **Active (v1.0)** | 2026-10-14 | Comprehensive 8-page matrix detailing sensory constraints across Architecture, Nature, Lighting, Physics/Motion, Audio, and Weather. |
+| `CalmWorld_Psychological_Evaluation_v1.0.docx` | DOCX | Dr. Akhgari | **Active (v1.0)** | 2026-10-16 | Expert psychological evaluation of Calm World interaction, tactile objects, sound limits, and character behavior. |
 
 ---
 

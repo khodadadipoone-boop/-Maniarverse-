@@ -6,7 +6,7 @@
 - **Owner / Lead:** Product Management / Research Lead
 - **Key Contributors:** Hadis Alidokht (Benchmark/Design), Dr. Akhgari (Clinical Consultant)
 - **Status:** Active
-- **Last Updated:** 2026-10-12
+- **Last Updated:** 2026-10-16
 
 ---
 
@@ -17,15 +17,17 @@ This directory serves as the single source of truth for all foundational researc
 1. **Root (`research/`):** Comprehensive competitor analysis and global benchmarks.
 2. **`research/screening/`:** Clinical questionnaires, assessment frameworks, and audit logs.
    - **`research/screening/voice-notes/`:** Audio rationales, expert consultations, and formal inquiries.
+3. **`research/world-guidelines/`:** Psychological evaluations, tactile/audio design rules for worlds (e.g., Calm World).
 
 ---
 
 ## Deliverables Inventory
 
-| Deliverable / Subdirectory | Type | Author / Contributor | Status | Last Updated | Description |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `Competitor_Benchmark_Autism_Apps_v1.0.pdf` | Benchmark Report | Hadis Alidokht / Research | Active (v1.0) | Historical | Analysis of 10 international autism support and developmental applications. |
-| `screening/` | Submodule / Directory | Dr. Akhgari / Product Team | Active | 2026-10-12 | Developmental screening questionnaires, audit trails, and clinical validation voice notes. |
+| Deliverable / Subdirectory | Type | Author / Contributor | Status | Last Updated | Description | Commit Hash |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `Competitor_Benchmark_Autism_Apps_v1.0.pdf` | Benchmark Report | Hadis Alidokht / Research | Active (v1.0) | Historical | Analysis of 10 international autism support and developmental applications. | — |
+| `screening/` | Submodule / Directory | Dr. Akhgari / Product Team | Active | 2026-10-12 | Developmental screening questionnaires, audit trails, and clinical validation voice notes. | — |
+| `world-guidelines/CalmWorld_Psychological_Evaluation_v1.0.docx` | Clinical Evaluation | Dr. Akhgari | Active (v1.0) | 2026-10-16 | ارزیابی تخصصی روان‌شناختی Calm World (اشیای لمسی، صوت و رفتار مانیار) | `cfc1f4f` |
 
 ---
 
