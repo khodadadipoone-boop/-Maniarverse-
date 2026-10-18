@@ -1,37 +1,22 @@
-# Directory Ownership & Governance: User Flows & Sitemaps
+# User Flows & Sitemaps Ownership
 
-## 1. Directory Overview
-- **Path:** `design/user-flow/`
-- **Owner / Lead Designer:** Hadis Alidokht (UI/UX Design Lead)
-- **Technical Supervisor:** Lead Architect / Project Maintainer
-- **Classification:** Internal Project Design Documentation
-- **Status:** Active Baseline
+## Scope & Purpose
+This directory contains the official user flow diagrams, parental onboarding logic, and overarching application sitemaps for the Maniarverse platform. These artifacts bridge clinical sensory guidelines with technical navigation structures across the Parent Web Portal and Child Interactive Worlds.
 
 ---
 
-## 2. Purpose & Scope
-This directory serves as the centralized repository for high-level user flow diagrams, parental onboarding logic, and overarching application sitemaps for the **Maniarverse** platform. 
+## Deliverables & Version History
 
-Artifacts located herein bridge psychological and clinical interaction principles with technical front-end navigation structures across the Parent Portal and Child Interactive Worlds.
-
----
-
-## 3. Deliverables & Version Registry
-
-| Artifact Name | Source Reference | Version | Status | Description |
-| :--- | :--- | :---: | :---: | :--- |
-
-| `UserFlow_v1.0.pdf` | Figma Node `16:175` (`Section 1.pdf`) | `v1.0` | **Deprecated** | Initial parental authentication, OTP flow, child intake, and core metrics dashboard architecture. Superseded by v2.0. |
-
-| `UserFlow_v2.0.pdf` | Figma Board (`V2.pdf`) | `v2.0` | **Active** | Streamlined parental onboarding featuring updated child intake, profile selector, and the "Recently Experience" activity loop. |
-
-| `Sitemap_Maniarverse_v1.0.pdf` | Figma / Vector Export (`png2pdf.pdf`) | `v1.0` | **Deprecated** | Baseline end-to-end application sitemap mapping Splash, Auth, Parent Dashboard, Child Worlds, and Reporting Swimlanes. Superseded by v2.0. |
-
-| `Sitemap_Maniarverse_v2.0.pdf` | Figma Architecture Update | `v2.0` | **Active** | Refined structural hierarchy reflecting updated parental views, synchronized child world routing, and revised navigation topology. |
+| ID | Deliverable / Specification | File Name | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
+| :---: | :--- | :--- | :---: | :--- | :--- | :---: | :---: | :---: |
+| 1 | Onboarding & Intake Flow v1 | `Section 1.pdf` (`UserFlow_v1.0.pdf`) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `67fff48` | Deprecated |
+| 2 | Refined Parental Onboarding Flow | `V2.pdf` (`UserFlow_v2.0.pdf`) | v2.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
+| 3 | Core Application Architecture Sitemap | `png2pdf.pdf` (`Sitemap_v1.0.pdf`) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
 
 ---
 
-## 4. Governance & Audit Rules
-1. **Strict No-Deletion Policy:** Historic flow diagrams and obsolete sitemap iterations must never be deleted from the repository. Superseded versions must be retained and marked as `Deprecated` in this registry to maintain complete UX decision lineage.
-2. **Naming Convention:** All artifacts must adhere to strict PascalCase/snake-less naming standards with explicit semantic versioning (`[ArtifactType]_[Scope]_[Descriptor]_v[X].[Y].[ext]`).
-3. **Traceability:** Any structural update or Figma node export must specify the source design component, version delta, and alignment with clinical guidelines established by Dr. Akhgari.
+## Governance & Audit Rules
+1. **Role-Based Ownership:** The primary owner of this module is the Product Design & UI/UX Team. Changes in personnel do not invalidate this registry; new contributors are appended to the deliverables history.
+2. **Strict Non-Deletion Policy:** Historic flow diagrams and obsolete sitemap iterations must never be deleted from the repository. Superseded versions are retained and explicitly marked as `Deprecated` to maintain complete decision lineage.
+3. **Traceability:** Every deliverable is mapped to its verified Git commit hash to maintain a tamper-proof audit trail across all design milestones.
+4. **Naming Standard:** New artifacts must adhere to space-less conventions (kebab-case or PascalCase) accompanied by semantic version suffixes (e.g., `UserFlow_v2.0.pdf`).
