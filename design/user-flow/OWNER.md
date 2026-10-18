@@ -9,9 +9,9 @@ This directory contains the official user flow diagrams, parental onboarding log
 
 | ID | Deliverable / Specification | File Name | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
 | :---: | :--- | :--- | :---: | :--- | :--- | :---: | :---: | :---: |
-| 1 | Onboarding & Intake Flow v1 | `Section 1.pdf` (`UserFlow_v1.0.pdf`) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `67fff48` | Deprecated |
-| 2 | Refined Parental Onboarding Flow | `V2.pdf` (`UserFlow_v2.0.pdf`) | v2.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
-| 3 | Core Application Architecture Sitemap | `png2pdf.pdf` (`Sitemap_v1.0.pdf`) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
+| 1 | Onboarding & Intake Flow v1 | `UserFlow_v1.0.pdf` | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `67fff48` | Deprecated |
+| 2 | Refined Parental Onboarding Flow | `UserFlow_v2.0.pdf` | v2.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
+| 3 | Core Application Architecture Sitemap | `Sitemap_v1.0.pdf` | v1.0 | Hadis Alidokht | Product Designer | 2026-10-10 | `67fff48` | Approved |
 
 ---
 
