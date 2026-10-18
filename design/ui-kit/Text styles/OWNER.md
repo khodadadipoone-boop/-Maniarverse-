@@ -7,9 +7,9 @@ This directory contains the official typography scale, font hierarchies, and tex
 
 ## Deliverables & Version History
 
-| ID | Deliverable / Specification | File Name | Version | Designed / Created By | Role | Delivery Date | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Typography Scale & Hierarchy | `Container.pdf` | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | Approved |
+| ID | Deliverable / Specification | Reference / Spec | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
+| :--- | :--- | :--- | :---: | :--- | :--- | :---: | :---: | :--- |
+| 1 | Typography Scale & Hierarchy | Inline Guidelines | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `2e856c8` | Approved |
 
 ---
 
