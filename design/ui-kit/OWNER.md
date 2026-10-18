@@ -7,19 +7,19 @@ This directory serves as the root for the Maniarverse UI Kit and Design System, 
 
 ## Directory Structure & Sub-module Ownership
 
-| Sub-directory | Scope & Content | Sub-module OWNER | Primary Deliverables | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| `color styles/` | Color Palettes (Primary, Secondary, Semantic Tokens) | [color styles/OWNER.md](./color%20styles/OWNER.md) | 7 Color Palette Specs (v1.0) | Approved |
-| `component/` | UI Components (Buttons, Inputs, Modals, Badges, etc.) | [component/OWNER.md](./component/OWNER.md) | 8 UI Component Specs (v1.0) | Approved |
-| `Text styles/` | Typography Scale (Headings, Body, Sizes & Weights) | [Text%20styles/OWNER.md](./Text%20styles/OWNER.md) | Typography Scale Spec (v1.0) | Approved |
+| Sub-directory | Scope & Content | Sub-module OWNER | Primary Deliverables | Commit Hash | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `color styles/` | Color Palettes (Primary, Secondary, Semantic Tokens) | [color styles/OWNER.md](./color%20styles/OWNER.md) | 7 Color Palette Specs (v1.0) | `9db1fd3` | Approved |
+| `component/` | UI Components (Buttons, Inputs, Modals, Badges, etc.) | [component/OWNER.md](./component/OWNER.md) | 9 UI Component Specs (v1.0) | `9db1fd3` | Approved |
+| `Text styles/` | Typography Scale (Headings, Body, Sizes & Weights) | [Text%20styles/OWNER.md](./Text%20styles/OWNER.md) | Typography Scale Spec (v1.0) | `2e856c8` | Approved |
 
 ---
 
 ## Master Deliverables & Version Log
 
-| ID | Module | Deliverable Description | Version | Designed / Created By | Role | Delivery Date | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | UI Kit (v1.0 Complete) | Full MVP Design System (Colors, Typography, UI Components) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | Approved |
+| ID | Module | Deliverable Description | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | UI Kit (v1.0 Complete) | Full MVP Design System (Colors, Typography, UI Components) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `2e856c8` | Approved |
 
 ---
 
