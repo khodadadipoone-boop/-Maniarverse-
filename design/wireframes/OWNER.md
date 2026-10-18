@@ -1,20 +1,20 @@
-# Wireframes & User Flows Ownership
+# Wireframes Ownership
 
 ## Scope & Purpose
-This folder contains all user flow diagrams, wireframes, and UI/UX structural design assets for the Maniarverse project.
+This directory contains low-to-high fidelity wireframes, page structure blueprints, and layout prototypes for the Maniarverse applications (Parent Web Dashboard and Child Experience). These wireframes translate clinical research and user journeys into spatial UI structures prior to high-fidelity component styling.
 
 ---
 
 ## Deliverables & Version History
 
-| ID | Deliverable Name | File Name | Source / Link | Version | Designed / Created By | Role | Delivery Date | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Additional User Flows & Wireframes (Landing Page) | `Additional_UserFlows_Wireframes_LandingPage_v1.0.pdf` | [Figma Project](https://www.figma.com/design/zLTPDSzdeQK210y46TV6QN/Untitled?node-id=326-2738&m=draw) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | Approved |
+| ID | Deliverable / Specification | File Name | Source / Link | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
+| :---: | :--- | :--- | :--- | :---: | :--- | :--- | :---: | :---: | :---: |
+| 1 | Landing Page & Core Wireframes | `Wireframes_LandingPage_v1.0.pdf` | [Figma Project](https://www.figma.com/design/zLTPDSzdeQK210y46TV6QN/Untitled?node-id=326-2738&m=draw) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `9db1fd3` | Approved |
 
 ---
 
-## Versioning & Handover Rules
-1. **Historical Integrity:** Never delete or overwrite previous deliverable files.
-2. **Version Increments:** Any update or redesign must produce a new file version (e.g., `v1.1`, `v2.0`) and corresponding source links.
-3. **Contributor Tracking:** Each new version must be added as a new row in the table above, explicitly stating who designed that specific version in the `Designed / Created By` column.
-4. **Status Management:** When a new version is approved, update the previous version's status from `Approved` to `Deprecated`.
+## Governance & Audit Rules
+1. **Role-Based Ownership:** The primary custodian of this directory is the Product Design & UI/UX Team. Personnel transitions do not alter structural governance; new contributors are appended to the version history.
+2. **Strict Non-Deletion Policy:** Historical wireframes and early layout explorations must never be deleted from the repository. Superseded versions are preserved and marked as `Deprecated` to maintain design lineage.
+3. **Traceability:** Every deliverable must be tied to its verified Git commit hash to guarantee a complete and auditable engineering log.
+4. **Naming Standard:** All future wireframe exports must adhere to space-less conventions (kebab-case or PascalCase) and include semantic version suffixes (e.g., `Wireframes_ParentDashboard_v1.0.pdf`).
