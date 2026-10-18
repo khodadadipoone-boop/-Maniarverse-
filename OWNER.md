@@ -1,54 +1,55 @@
 # Maniarverse — Master Repository Governance & Deliverables Registry
 
-این سند، شناسنامه کلان مخزن و مرجع ثبت رسمی تمامی مسئولیت‌ها، مسیرها و وضعیت خروجی‌های تحویل‌داده‌شده در پروژه مانیارورس است.
+This document serves as the master registry for directory ownership, governance policies, and authoritative deliverable traceability across the Maniarverse repository.
 
 ---
 
-## ۱. جدول حاکمیت و مسئولیت پوشه‌ها (Architecture & Ownership)
+## 1. Directory Governance & Functional Ownership
 
-| مسیر دایرکتوری | مسئول / متولی | قرارداد / ماهیت | وضعیت | Commit Hash |
-|---|---|---|:---:|:---:|
-| `services/api` | تیم بک‌اند | هسته سرویس‌های FastAPI، احراز هویت و پایگاه داده PostgreSQL | **Active** | `149de60` |
-| `apps/parent-web` | تیم فرانت‌اند | داشبورد مدیریتی و پایش والدین (Next.js / React) | **Active** | — |
-| `apps/child-app` | تیم محصول و توسعه | اپلیکیشن تعاملی و دنیاهای حسی کودک اوتیسم | **Active** | — |
-| `design` | تیم طراحی محصول (حدیث علی‌دخت) | طراحی UI/UX، کامپوننت‌ها، یوزرفلوها | **Active** | `67fff48` |
-| `research` | تیم پژوهش و مشاور بالینی (دکتر اخگری) | مطالعات پژوهشی، بنچمارک‌ها و راهنماهای طراحی دنیاها | **Active** | `cfc1f4f` |
-| `docs` | تیم معماری و مدیریت محصول | مستندات معماری، تصمیمات کلیدی (ADR) و برنامه‌ریزی MVP | **Active** | `43a8d3e` |
-
----
-
-## ۲. خروجی‌های تیم دیزاین و محصول (متولی: حدیث علی‌دخت)
-
-| نام فایل تحویلی | مسیر در مخزن | نسخه | وضعیت | توضیحات | Commit Hash |
-|---|---|:---:|:---:|---|:---:|
-| `UserFlow_v1.0.pdf` | `design/user-flow/` | v1.0 | **Deprecated** | فلو اولیه ورود و ارزیابی والدین (منسوخ با نسخه ۲) | — |
-| `UserFlow_v2.0.pdf` | `design/user-flow/` | v2.0 | **Active** | نسخه بازبینی‌شده یوزرفلو با ساده‌سازی جریان Recently Experience | — |
-| `Sitemap_Maniarverse_v2.0.pdf` | `design/user-flow/` | v2.0 | **Active** | نقشه معماری صفحات، مسیر بازیابی تسک‌ها و گزارش والدین | — |
-| `Wireframes_Parent_v1.0.pdf` | `design/wireframes/` | v1.0 | **Active** | مستند وایرفریم‌ها و ساختار صفحات داشبورد والدین | — |
-| `UI_Kit_Components_v1.0.pdf` | `design/ui-kit/` | v1.0 | **Active** | مستندات کامپوننت‌ها (دکمه، اینپوت، کانتینر، سوییچ و رادیوباتن) | — |
-| `UI_Kit_Styles_v1.0.pdf` | `design/ui-kit/` | v1.0 | **Active** | مستندات استایل‌های رنگی (Primary/Semantic) و تایپوگرافی | — |
+| Directory Path | Functional Role / Owner | Scope & Nature | Module Status | Commit Hash |
+| :--- | :--- | :--- | :---: | :---: |
+| `services/api` | Backend Engineering Team | FastAPI services core, JWT authentication, and PostgreSQL ORM models | **Active** | `149de60` |
+| `apps/parent-web` | Frontend Engineering Team | Parent monitoring web dashboard & design system implementation (Next.js) | **Active** | `149de60` |
+| `apps/child-app` | Child Experience & Interactive Team | Child sensory interactive application & Calm World client modules | **Active** | `149de60` |
+| `design` | Product Design & UI/UX Team | Information architecture, design tokens, UI components, and user journeys | **Active** | `9db1fd3` |
+| `research` | Clinical Research & Advisory Board | Benchmark studies, clinical methodology, and psychological world guidelines | **Active** | `cfc1f4f` |
+| `docs` | Architecture & Product Management | System architecture, sequence diagrams, ERD, ADRs, and MVP scope roadmaps | **Active** | `43a8d3e` |
 
 ---
 
-## ۳. خروجی‌های پژوهشی و مشاوره بالینی (متولیان: تیم پژوهش و دکتر اخگری)
+## 2. Product Design Deliverables
 
-> **قاعده محرمانگی:** هیچ‌گونه داده هویتی بیمار (PHI/PII) در مخزن ذخیره نمی‌شود. محتوا باید به روش‌شناسی، پژوهش و ارزیابی محدود باشد و پیش از ثبت در مخزن از نظر وجود اطلاعات شناسایی‌کننده بررسی شود.
-
-| نام فایل تحویلی | مسیر در مخزن | نسخه | وضعیت | توضیحات | Commit Hash |
-|---|---|:---:|:---:|---|:---:|
-| `Competitor_Benchmark_Autism_Apps_v1.0.pdf` | `research/` | v1.0 | **Active** | تحلیل تطبیقی و بنچمارک اپلیکیشن‌های بین‌المللی اوتیسم | — |
-| `Clinical_Basic_Questions_v1.0.docx` | `research/clinical_foundations/` | v1.0 | **Active** | سوالات پایه ارزیابی حسی و شناختی کودک | — |
-| `DrAkhgari_Clinical_Responses_v1.0.docx` | `research/clinical_foundations/` | v1.0 | **Active** | متن تدوین‌شده راهنماها و متدولوژی مداخلات بالینی | — |
-| `Voice_Notes_Batch_01` | `research/clinical_foundations/voice-notes/` | v1.0 | **Active** | مجموعه ۱۶ فایل صوتی توضیحات بالینی با نام‌گذاری یکنواخت DrAkhgari_Qxx | — |
-| `CalmWorld_Psychological_Evaluation_v1.0.docx` | `research/world-guidelines/` | v1.0 | **Active** | ارزیابی روان‌شناختی Calm World، شامل راهنمایی‌های مربوط به اشیای لمسی، صوت و رفتار مانیار | `cfc1f4f` |
+| Deliverable / Artifact Name | Repository Path | Version | Status | Original Contributor | Commit Hash |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| `UserFlow_v1.pdf` (`Section 1.pdf`) | `design/user-flow/` | v1.0 | **Deprecated** | Hadis Alidokht | `67fff48` |
+| `UserFlow_v2.pdf` (`V2.pdf`) | `design/user-flow/` | v2.0 | **Active** | Hadis Alidokht | `67fff48` |
+| `Sitemap_Maniarverse.pdf` (`png2pdf.pdf`) | `design/user-flow/` | v1.0 | **Active** | Hadis Alidokht | `67fff48` |
+| `Wireframes_Parent_v1.0.pdf` (`Frame 49344.pdf`) | `design/wireframes/` | v1.0 | **Active** | Hadis Alidokht | `9db1fd3` |
+| UI Component Specifications (9 PDFs) | `design/ui-kit/component/` | v1.0 | **Active** | Hadis Alidokht | `9db1fd3` |
+| Color Palettes & Semantic Tokens (7 PDFs) | `design/ui-kit/color styles/` | v1.0 | **Active** | Hadis Alidokht | `9db1fd3` |
+| Typography Scales & Hierarchy Guidelines | `design/ui-kit/Text styles/` | v1.0 | **Active** | Hadis Alidokht | `2e856c8` |
 
 ---
 
-## ۴. قوانین نگهداری و ثبت تغییرات (Audit Policy)
+## 3. Clinical Research & Advisory Deliverables
 
-1. **عدم حذف فایل‌ها (No Deletion):** هیچ فایل تحویلی نباید حذف فیزیکی شود. در صورت جایگزینی، نسخهٔ قدیمی در مخزن حفظ و وضعیت آن `Deprecated` ثبت می‌شود.
-2. **نام‌گذاری بدون فاصله:** در نام فایل‌ها و پوشه‌های جدید از فاصله استفاده نشود. نام فایل‌های موجود برای رعایت این قاعده بدون ثبت تغییر و حفظ سابقه تغییر نکنند.
-3. **تطبیق با کامیت:** هش کوتاه کامیتِ مربوط به هر خروجی یا تغییر مهم، پس از ثبت در Git در این سند درج شود. هش کامیتی که خود این سند را تغییر می‌دهد، در کامیت بعدی ثبت خواهد شد.
-4. **وجود OWNER.md:** هر دایرکتوری در مخزن باید `OWNER.md` متناسب با مسئولیت و محتوای همان دایرکتوری داشته باشد.
-5. **نسخه‌بندی:** خروجی‌های نسخه‌دار با الگوی معنایی مانند `v1.0` و `v2.0` ثبت شوند؛ نسخهٔ منسوخ‌شده حذف نشود و وضعیت آن در رجیستری به‌روزرسانی شود.
-6. **حفاظت از داده‌های حساس:** داده‌های شخصی یا سلامت‌محورِ قابل‌شناسایی (PII/PHI) در مخزن قرار نگیرند.
+> **Data Privacy Policy:** No Protected Health Information (PHI) or Personally Identifiable Information (PII) is stored in this repository. All clinical files contain purely foundational methodologies and sensory evaluations. Legal and financial records (contracts, appendices, receipts) are stored exclusively in secure off-git cloud storage.
+
+| Deliverable / Artifact Name | Repository Path | Version | Status | Scientific Contributor | Commit Hash |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| `Maniarverse_Benchmark.xlsx - Benchmark.pdf` | `research/` | v1.0 | **Active** | Research Team | `9db1fd3` |
+| `basic questions.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
+| Clinical Analysis & Methodology Docs (3 docx files) | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
+| Clinical Analysis Voice Recordings (16 ogg files) | `research/voice-notes/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
+| `CalmWorld_Psychological_Evaluation_v1.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
+| `World_Design_Guidelines_DrAkhgari_v1.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `2e856c8` |
+
+---
+
+## 4. Governance & Repository Audit Policy
+
+1. **Role-Based Ownership:** Responsibilities are assigned to functional roles rather than single individuals. Personnel turnover does not alter module ownership; incoming contributors are appended to revision logs and git histories.
+2. **Strict Non-Deletion Policy (Immutability):** Deliverables cannot be physically deleted from git history. Deprecated artifacts remain preserved and are explicitly marked as `Deprecated` in registry tables.
+3. **No-Space Naming Convention:** New artifacts must adhere to space-less conventions (kebab-case or PascalCase) accompanied by semantic version suffixes (e.g., `_v2.0`). Existing historical files retain their original paths to preserve commit continuity.
+4. **Commit Traceability:** Every milestone delivery and architectural update must be mapped to an exact Git commit hash in this registry to maintain an unambiguous audit trail.
+5. **Separation of Legal & Financial Records:** Contracts, appendices, invoices, and banking/payment receipts are strictly excluded from the Git tree via `.gitignore` and archived in encrypted external cloud drives with formal ledger tracking.
