@@ -22,7 +22,7 @@ This directory houses the foundational world-building guidelines, sensory constr
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `World_Design_Guidelines_DrAkhgari_v1.0.docx` | DOCX | Dr. Akhgari | **Active (v1.0)** | `2e856c8` | Comprehensive matrix detailing sensory constraints across Architecture, Nature, Lighting, Physics/Motion, Audio, and Weather. |
 | `CalmWorld_Psychological_Evaluation_v1.0.docx` | DOCX | Dr. Akhgari | **Active (v1.0)** | `2e856c8` | Expert psychological evaluation of Calm World interaction, tactile objects, sound limits, and character behavior. |
-| `OWNER.md` | Markdown | Technical & Documentation Lead | **Active / Verified** | `2e856c8` | Directory governance, metadata, and audit trail. |
+
 
 ---
 
