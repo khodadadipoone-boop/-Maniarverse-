@@ -1,31 +1,27 @@
-# Module Ownership: Clinical Audio Feedback & Methodological Clarifications
+# Module Ownership: Clinical Consultation Voice Notes & Screening Recordings
 
 ## Module Metadata
-- **Module Name:** Dr. Akhgari Voice Notes (Screening Rationale & Methodological Inquiries)
+- **Module Name:** Expert Clinical Voice Notes (Dr. Akhgari Consultation Archive)
 - **Path:** `research/screening/voice-notes/`
-- **Owner / Contributor:** Dr. Mohammadreza Akhgari (Psychology & Behavioral Science Consultant)
-- **Reviewer / Stakeholder:** Product Management & Clinical Research Team
-- **Contract Reference:** Phase 1 Deliverables (Specialized Psychology & Cognitive Science Consultation)
-- **Status:** Archived / Reference Only
-- **Last Updated:** 2026-10-12
+- **Primary Subject Matter Expert:** Dr. Akhgari (Psychology & Behavioral Science Consultant)
+- **Lead Designer / Reviewer:** Product Management & Clinical Research Team
+- **Status:** Active Audio Reference Archive (v1.0)
+- **Last Updated:** 2026-10-20
 
 ---
 
-## Deliverables Inventory
+## Scope & Purpose
+This directory archives the raw and structured audio consultation sessions (`.ogg`) and screening discussions provided by Dr. Akhgari. These voice notes serve as foundational qualitative references for child interaction models, behavioral safeguards, and clinical validation rules within the Maniarverse framework.
 
-| Asset Name | Format | Author / Contributor | Deliverable Type | Status | Date Added | Description |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `1.ogg` through `16.ogg` (16 Files) | OGG Audio | Dr. Mohammadreza Akhgari | Clinical Voice Explanations | Archived | 2026-10-12 | Series of 16 voice recordings providing clinical rationale, screening criteria details, and answers to methodological inquiries. |
-| `Questions_To_DrAkhgari_v1.0.md` | Markdown | Product / Research Team | Formal Inquiry | Active | 2026-10-2 | Formal documented inquiries regarding developmental construct origins, scoring methodology, regression detection, age suitability, and intellectual attribution. |
-
----
-
-## Context & Audit Trail Rationale
-- This directory preserves the consultant's direct verbal explanations and methodological justifications regarding the initial 15-question developmental screening instrument (`Screening_Questionnaire_Initial_15Q_v1.0.docx`).
-- Maintained as an immutable audit trail to inform subsequent clinical design iterations, validation standards, and regulatory documentation.
+## Key Governance & Compliance Principles
+- **Restricted Access & Privacy:** In accordance with the repository security guidelines and privacy standards, raw consultation audio is archived with explicit reference constraints. PII or patient-related data is strictly prohibited.
+- **Audit Lineage:** Audio assets map directly to structured text transcripts (e.g., `basic questions.docx`) to maintain end-to-end traceability for software implementation.
+- **Modification Policy:** Deletion of original baseline audio is strictly prohibited (`git restore` or `git rm` compliance).
 
 ---
 
-## Compliance & Security Notice
-- All assets strictly contain professional and theoretical clinical discussions.
-- Zero Protected Health Information (PHI) or Personally Identifiable Information (PII) of children/participants is included.
+## Change Log
+
+| Date | Change | Commit Hash |
+| :--- | :--- | :--- |
+| 2026-10-20 | Initial archival of consultant voice notes (v1.0) | `d9b0aa7` |
