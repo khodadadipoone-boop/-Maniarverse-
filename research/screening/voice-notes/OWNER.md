@@ -1,27 +1,28 @@
-# Module Ownership: Clinical Consultation Voice Notes & Screening Recordings
+# Owner & Governance: Research - Screening Voice Notes
 
-## Module Metadata
-- **Module Name:** Expert Clinical Voice Notes (Dr. Akhgari Consultation Archive)
-- **Path:** `research/screening/voice-notes/`
-- **Primary Subject Matter Expert:** Dr. Akhgari (Psychology & Behavioral Science Consultant)
-- **Lead Designer / Reviewer:** Product Management & Clinical Research Team
-- **Status:** Active Audio Reference Archive (v1.0)
-- **Last Updated:** 2026-10-20
+## Directory Overview
+This directory contains clinical screening voice notes, audio records, and associated consultation questionnaires (e.g., Dr. Akhgari) for the Maniarverse project.
 
 ---
 
-## Scope & Purpose
-This directory archives the raw and structured audio consultation sessions (`.ogg`) and screening discussions provided by Dr. Akhgari. These voice notes serve as foundational qualitative references for child interaction models, behavioral safeguards, and clinical validation rules within the Maniarverse framework.
-
-## Key Governance & Compliance Principles
-- **Restricted Access & Privacy:** In accordance with the repository security guidelines and privacy standards, raw consultation audio is archived with explicit reference constraints. PII or patient-related data is strictly prohibited.
-- **Audit Lineage:** Audio assets map directly to structured text transcripts (e.g., `basic questions.docx`) to maintain end-to-end traceability for software implementation.
-- **Modification Policy:** Deletion of original baseline audio is strictly prohibited (`git restore` or `git rm` compliance).
+## Ownership & Roles
+- **Domain Owner:** Clinical Research & Advisory Board
+- **Lead Clinical Consultant:** Dr. Akhgari
+- **Technical & Documentation Lead:** Engineering & Product Team
 
 ---
 
-## Change Log
+## Contents & Verified Git Commit History
 
-| Date | Change | Commit Hash |
-| :--- | :--- | :--- |
-| 2026-10-20 | Initial archival of consultant voice notes (v1.0) | `d9b0aa7` |
+| Deliverable / File Name | Description | Version | Verified Git Commit Hash | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| `*.ogg` (Voice Notes 01-16) | Clinical screening voice recordings & intake discussions | v1.0 | `d9b0aa7` | Active / Verified |
+| `Questions_To_DrAkhgari_v1.0.docx` | Structured clinical questions and consultation notes for Dr. Akhgari | v1.0 | `fd494b0` | Active / Verified |
+| `OWNER.md` | Directory governance & audit trail | v1.0 | `fd494b0` | Active / Verified |
+
+---
+
+## Governance & Audit Rules
+1. **No Deletion Policy:** Deletion of files is prohibited. Use `git rm` or `git restore` strictly through proper governance channels.
+2. **Clinical Sensitivity:** Audio files and clinical documents must remain strictly confidential and properly tracked.
+3. **Versioning:** Semantic versioning applies to all accompanying documents (`v1.0`, `v2.0`, etc.).
