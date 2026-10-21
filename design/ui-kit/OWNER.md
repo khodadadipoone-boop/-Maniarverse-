@@ -1,29 +1,28 @@
-# UI Kit Ownership & Design System Overview
+# Module Ownership: Clinical Screening & Assessment Tools
 
-## Scope & Purpose
-This directory serves as the root for the Maniarverse UI Kit and Design System, containing foundational design tokens (colors, typography) and reusable UI component specs.
+## Module Metadata
+- **Module Name:** Clinical Screening & Developmental Assessment
+- **Path:** `research/screening/`
+- **Primary Owner:** Product Management / Clinical Research Team
+- **Clinical Consultant:** Dr. Mohammadreza Akhgari (Psychology & Behavioral Science)
+- **Status:** Active / Iterative
+- **Last Updated:** 2026-10-20
 
----
+## Purpose
+This directory houses the clinical and psychological screening methodologies, developmental questionnaires, and all supporting clinical rationale used to validate the Maniarverse assessment pipeline.
 
-## Directory Structure & Sub-module Ownership
+## Deliverables Inventory
 
-| Sub-directory | Scope & Content | Sub-module OWNER | Primary Deliverables | Commit Hash | Status |
+| Asset Name | Format | Author / Owner | Status | Verified Commit Hash | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `color styles/` | Color Palettes (Primary, Secondary, Semantic Tokens) | [color styles/OWNER.md](./color%20styles/OWNER.md) | 7 Color Palette Specs (v1.0) | `9db1fd3` | Approved |
-| `component/` | UI Components (Buttons, Inputs, Modals, Badges, etc.) | [component/OWNER.md](./component/OWNER.md) | 9 UI Component Specs (v1.0) | `9db1fd3` | Approved |
-| `Text styles/` | Typography Scale (Headings, Body, Sizes & Weights) | [Text%20styles/OWNER.md](./Text%20styles/OWNER.md) | Typography Scale Spec (v1.0) | `2e856c8` | Approved |
+| `Screening_Questionnaire_Initial_15Q_v1.0.docx` | DOCX | Dr. Mohammadreza Akhgari | Active / Verified | `9db1fd3` | The initial 15-question clinical screening questionnaire and assessment instrument. |
+| `voice-notes/` | Directory | Dr. Akhgari / Engineering | Active / Verified | `d9b0aa7` | Sub-directory containing clinical audio feedback, intake discussions, and consultation records. |
 
----
+## Governance & Audit Policy
+- **Audit Trail Integrity:** No files within this directory shall be deleted (`git rm` / strict git history preservation). Historical and iterative deliverables must be maintained to ensure a clear audit trail of clinical design decisions.
+- **Versioning:** All new iterations must use semantic versioning (`v1.0`, `v2.0`, etc.) in the filename.
+- **Clinical Validation:** All screening tools must be cross-referenced with clinical rationale (found in `voice-notes/` or consultation documents).
 
-## Master Deliverables & Version Log
-
-| ID | Module | Deliverable Description | Version | Designed / Created By | Role | Delivery Date | Commit Hash | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | UI Kit (v1.0 Complete) | Full MVP Design System (Colors, Typography, UI Components) | v1.0 | Hadis Alidokht | Product Designer | 2026-10-05 | `2e856c8` | Approved |
-
----
-
-## Handover & Maintenance Rules
-1. **Single Source of Truth:** All UI styling in web/mobile applications (`apps/parent-web`, `apps/child-app`) must directly reference the tokens defined in this UI Kit.
-2. **Sub-folder Delegation:** Detailed versioning and file listings are maintained within the `OWNER.md` of each respective subfolder.
-3. **Immutability & Deprecation:** Prior versions (v1.0) must never be deleted. Any design system updates should be added as new version files and logged across these files.
+## Compliance & Security Notice
+- Contains no Protected Health Information (PHI) or Personally Identifiable Information (PII).
+- This directory is restricted to theoretical, research, and design-stage clinical methodology.
