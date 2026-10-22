@@ -1,44 +1,34 @@
 # Maniarverse
 
-یک مخزن برای همه‌ی بخش‌های محصول، با ساختار بر اساس مسئولیت.
+A unified repository for all product components, organized by domain responsibility.
 
-## ساختار
+## Directory Structure
 
-| مسیر | مسئولیت |
+| Path | Responsibility |
 |---|---|
-| `services/api` | بک‌اند FastAPI و دیتابیس |
-| `apps/parent-web` | داشبورد والد (وب) |
-| `apps/child-app` | اپ کودک (موتور تأییدشده) |
-| `design` | طراحی، کاراکتر، لوگو |
-| `research` | خلاصه‌ی پژوهش (بدون داده‌ی شخصی) |
-| `docs/decisions` | Decision Log |
-| `docs/planning` | Scope و معیارهای پذیرش |
-| `docs/architecture` | سیاست داده و معماری |
-| `docs/governance` | قواعد کار |
+| `services/api` | FastAPI backend service and database management |
+| `apps/web` | Web application: public landing & parental portal (Next.js with Route Groups) |
+| `apps/mobile/parent-mode` | Parent mobile application (React Native / Flutter dashboard) |
+| `apps/mobile/child-mode` | Child interactive application (Unreal Engine core engine) |
+| `design` | UI/UX design assets, design system, character assets, and branding |
+| `docs/decisions` | Architectural Decision Records (Decision Log) |
+| `docs/planning` | Project scope, pilot readiness, and acceptance criteria |
+| `docs/architecture` | System architecture and data protection policies |
+| `docs/governance` | Repository rules, principles, and governance standards |
 
-هر پوشه فایل `OWNER.md` دارد با مسئول، قرارداد، خروجی‌ها و وضعیت.
+Every directory contains a dedicated `OWNER.md` file specifying the designated owner, deliverables, rules, and current status.
 
-## قوانین
+## Repository Governance & Rules
 
-- هیچ داده‌ی کودک، فایل خصوصی، قرارداد، فیش یا مکاتبات مالی در مخزن نیست.
-- هر تحویل با شماره‌ی کامیت در `OWNER.md` ثبت می‌شود.
-- هر تصمیم معماری در `docs/decisions` ثبت می‌شود.
+- **Zero Clinical & Sensitive Data Policy:** No sensitive child data (PHI/PII), clinical interviews, voice recordings, questionnaires, legal contracts, or financial receipts are permitted in the Git repository.
+- **Traceability:** Every formal delivery must be referenced with a verified Git commit hash in the respective directory's `OWNER.md`.
+- **Architectural Traceability:** Any architectural change or stack modification must be documented in `docs/decisions/Decision_Log.md`.
 
-## راه‌اندازی
+## Getting Started
 
-### API
-```
+### API Backend (FastAPI)
+```bash
 cd services/api
 pip install -r requirements.txt
 alembic upgrade head
 uvicorn app.main:app --reload
-```
-
-### وب والد
-```
-cd apps/parent-web
-npm install
-npm run dev
-```
-
-> توجه: `.env` را در هیچ پوشه‌ای کامیت نکن. نمونه‌ی متغیرها را در `services/api/.env.example` بگذار.
