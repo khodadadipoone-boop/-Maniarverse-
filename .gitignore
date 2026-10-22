@@ -17,6 +17,7 @@ dist/
 build/
 
 # private material: never commit
+research/
 child_psychology/
 outputs/
 contracts/
