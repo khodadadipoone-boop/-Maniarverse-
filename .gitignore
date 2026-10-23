@@ -17,6 +17,7 @@ dist/
 build/
 
 # private material: never commit
+venv/
 research/
 child_psychology/
 outputs/
