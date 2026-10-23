@@ -2,7 +2,7 @@
 
 ## Ownership & Roles
 - **Technical Lead / Architecture:** Core Engineering Team
-- **Clinical Alignment:** Dr. Akhgari
+- **Alignment:** Dr. Akhgari
 - **Status:** Active
 
 ## Deliverables Registry

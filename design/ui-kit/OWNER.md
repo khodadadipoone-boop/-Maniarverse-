@@ -1,28 +1,21 @@
-# Module Ownership: Clinical Screening & Assessment Tools
+# Design Ownership & Deliverables
 
-## Module Metadata
-- **Module Name:** Clinical Screening & Developmental Assessment
-- **Path:** `research/screening/`
-- **Primary Owner:** Product Management / Clinical Research Team
-- **Clinical Consultant:** Dr. Mohammadreza Akhgari (Psychology & Behavioral Science)
-- **Status:** Active / Iterative
-- **Last Updated:** 2026-10-20
+## Ownership & Responsibility
+* **Module:** Product Design & Design System
+* **Responsible Designer:** Hadis Alidokht
+* **Module Status:** Active
 
-## Purpose
-This directory houses the clinical and psychological screening methodologies, developmental questionnaires, and all supporting clinical rationale used to validate the Maniarverse assessment pipeline.
+---
 
-## Deliverables Inventory
+## Deliverables Registry
 
-| Asset Name | Format | Author / Owner | Status | Verified Commit Hash | Description |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `Screening_Questionnaire_Initial_15Q_v1.0.docx` | DOCX | Dr. Mohammadreza Akhgari | Active / Verified | `9db1fd3` | The initial 15-question clinical screening questionnaire and assessment instrument. |
-| `voice-notes/` | Directory | Dr. Akhgari / Engineering | Active / Verified | `d9b0aa7` | Sub-directory containing clinical audio feedback, intake discussions, and consultation records. |
+| Deliverable | File Path | Version | Status | Commit Hash | Description |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| `UserFlow_v1.pdf` | `design/user-flow/` | v1.0 | Deprecated | `67fff48` | Initial onboarding flow with OTP and detailed intake (gender & diagnosis fields) |
+| `UserFlow_v2.pdf` | `design/user-flow/` | v2.0 | **Active** | `67fff48` | Streamlined onboarding flow with simplified registration and removed fields |
+| `Sitemap_Maniarverse_v1.0.pdf` | `design/user-flow/` | v1.0 | Deprecated | `67fff48` | Initial site architecture and page recovery paths |
+| `Sitemap_Maniarverse_v2.0.pdf` | `design/user-flow/` | v2.0 | **Active** | `67fff48` | Revised and finalized site architecture map |
+| `Wireframes` | `design/wireframes/` | v1.0 | **Active** | `9db1fd3` | Initial page wireframes and parent dashboard layouts |
+| `UI Kit & Design System` | `design/ui-kit/` | v1.0 | **Active** | `2e856c8` | Style guide, color tokens, typography scales, and reusable UI components |
 
-## Governance & Audit Policy
-- **Audit Trail Integrity:** No files within this directory shall be deleted (`git rm` / strict git history preservation). Historical and iterative deliverables must be maintained to ensure a clear audit trail of clinical design decisions.
-- **Versioning:** All new iterations must use semantic versioning (`v1.0`, `v2.0`, etc.) in the filename.
-- **Clinical Validation:** All screening tools must be cross-referenced with clinical rationale (found in `voice-notes/` or consultation documents).
-
-## Compliance & Security Notice
-- Contains no Protected Health Information (PHI) or Personally Identifiable Information (PII).
-- This directory is restricted to theoretical, research, and design-stage clinical methodology.
+> **Audit Trail Policy:** No deliverable is physically deleted. Deprecated versions are preserved to maintain full historical lineage and design evolution.

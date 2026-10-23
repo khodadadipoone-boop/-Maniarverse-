@@ -1,12 +1,13 @@
-# معماری
+# System Architecture
 
-- **مسئول:** ……………
-- **نقش:** Data Policy، ERD، معماری کلی
-- **قرارداد مرتبط:** ……… (شماره و تاریخ)
-- **وضعیت کلی:** پیش‌نویس
+- **Owner:** Technical Architecture Team
+- **Role:** Documenting technical architecture, data flows, data models, and structural standards strictly without personal data.
+- **Related Contract:** Maniarverse_MVP_Contract_v3.10
+- **Overall Status:** Proposed
 
-## خروجی‌ها
+## Deliverables
 
-| خروجی | هدف | تحویل‌دهنده | کامیت | تاریخ | وضعیت |
+| Deliverable | Purpose | Assignee | Commit | Date | Status |
 |---|---|---|---|---|---|
-| ……… | ……… | ……… | ……… | ……… | پیش‌نویس |
+| High-Level Architecture | Overall system component mapping | Tech Architecture Team | - | - | Proposed |
+| Data Model & Policies | Database structure and data guidelines | Tech Architecture Team | - | - | Proposed |

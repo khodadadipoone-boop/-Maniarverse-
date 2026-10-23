@@ -12,7 +12,6 @@ This document serves as the master registry for directory ownership, governance 
 | `apps/parent-web` | Frontend Engineering Team | Parent monitoring web dashboard & design system implementation (Next.js) | **Active** | `149de60` |
 | `apps/child-app` | Child Experience & Interactive Team | Child sensory interactive application & Calm World client modules | **Active** | `149de60` |
 | `design` | Product Design & UI/UX Team | Information architecture, design tokens, UI components, and user journeys | **Active** | `9db1fd3` |
-| `research` | Clinical Research & Advisory Board | Benchmark studies, clinical methodology, and psychological world guidelines | **Active** | `cfc1f4f` |
 | `docs` | Architecture & Product Management | System architecture, sequence diagrams, ERD, ADRs, and MVP scope roadmaps | **Active** | `43a8d3e` |
 
 ---
@@ -31,19 +30,12 @@ This document serves as the master registry for directory ownership, governance 
 
 ---
 
-## 3. Clinical Research & Advisory Deliverables
+## 3.Research & Advisory Deliverables
 
-> **Data Privacy Policy:** No Protected Health Information (PHI) or Personally Identifiable Information (PII) is stored in this repository. All clinical files contain purely foundational methodologies and sensory evaluations. Legal and financial records (contracts, appendices, receipts) are stored exclusively in secure off-git cloud storage.
+> **Data Privacy Policy:** No Protected Health Information (PHI) or Personally Identifiable Information (PII) is stored in this repository. All files contain purely foundational methodologies and sensory evaluations. Legal and financial records (contracts, appendices, receipts) are stored exclusively in secure off-git cloud storage.
 
 | Deliverable / Artifact Name | Repository Path | Version | Status | Scientific Contributor | Commit Hash |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| `Maniarverse_Benchmark.xlsx - Benchmark.pdf` | `research/` | v1.0 | **Active** | Research Team | `9db1fd3` |
-| `basic questions.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
-| Clinical Analysis & Methodology Docs (3 docx files) | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
-| Clinical Analysis Voice Recordings (16 ogg files) | `research/voice-notes/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
-| `CalmWorld_Psychological_Evaluation_v1.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `cfc1f4f` |
-| `World_Design_Guidelines_DrAkhgari_v1.docx` | `research/` | v1.0 | **Active** | Dr. Akhgari | `2e856c8` |
-
 ---
 
 ## 4. Governance & Repository Audit Policy

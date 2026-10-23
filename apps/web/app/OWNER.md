@@ -4,7 +4,7 @@
 - **Scope:** Root application folder for Next.js routing, managing top-level layouts, global CSS styling (`globals.css`), and Route Group isolation.
 - **Assigned Team:** Web Frontend Development Team (Mahsa & Ali Ensafi) under contract **Maniarverse_MVP_Contract_v3.10**.
 - **Product & UX/UI Oversight:** Hadis Alidokht (Product Designer).
-- **Clinical & Psychological Oversight:** Dr. Akhgari (Psychological Consultant) — ensuring all shared layouts and global UI elements respect strength-based, non-stigmatizing principles.
+- **Psychological Oversight:** Dr. Akhgari (Psychological Consultant) — ensuring all shared layouts and global UI elements respect strength-based, non-stigmatizing principles.
 - **Architecture Principle:** Strict separation of concerns via Next.js Route Groups:
   - `(landing)/` — Public introduction and overview.
   - `(parental-portal)/` — Secure authentication, dashboards, and parent services.

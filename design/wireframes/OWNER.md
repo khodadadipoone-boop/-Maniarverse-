@@ -1,7 +1,7 @@
 # Wireframes Ownership
 
 ## Scope & Purpose
-This directory contains low-to-high fidelity wireframes, page structure blueprints, and layout prototypes for the Maniarverse applications (Parent Web Dashboard and Child Experience). These wireframes translate clinical research and user journeys into spatial UI structures prior to high-fidelity component styling.
+This directory contains low-to-high fidelity wireframes, page structure blueprints, and layout prototypes for the Maniarverse applications (Parent Web Dashboard and Child Experience). These wireframes translate research and user journeys into spatial UI structures prior to high-fidelity component styling.
 
 ---
 

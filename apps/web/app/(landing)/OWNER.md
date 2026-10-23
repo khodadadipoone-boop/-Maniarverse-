@@ -5,7 +5,7 @@
 - **Assigned Team:** Web Frontend Development Team (Mahsa & Ali Ensafi) under contract **Maniarverse_MVP_Contract_v3.10**.
 - **UX/UI & Product Direction:** Hadis Alidokht (Product Designer).
 - **Clinical/Psychological Guidelines:** Dr. Akhgari (Psychological Consultant) — ensuring warm, supportive, and non-stigmatizing messaging for all visitors and prospective parents.
-- **Compliance Rules:** Zero clinical PHI/PII on public pages; strict adherence to accessibility standards for families.
+- **Compliance Rules:** Zero PHI/PII on public pages; strict adherence to accessibility standards for families.
 
 ## 2. Directory Structure
 - `apps/web/app/(landing)/page.tsx` — Main landing page.

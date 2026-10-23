@@ -7,12 +7,12 @@
 - **Status:** In Progress
 
 ## Architecture & Submodules
-- `child-mode/`: Core sensory-friendly 3D environment (Calm World, Maniyar character, touch-only interaction).
+- `child-mode/`: Core sensory-friendly 3D environment (Calm World, Maniar character, touch-only interaction).
 - `parent-mode/`: PIN-protected parental controls, session monitor, and settings management.
 
 ## Technical Requirements & Constraints
 - **Multi-Mode Integration:** Unified mobile binary integrating Child Mode and Parent Mode with an impenetrable security barrier (Parent Gate).
-- **Zero-PHI/PII in Source Control:** No personal identifiable information, clinical metrics, or diagnostic data stored locally in plain text or committed to Git.
+- **Zero-PHI/PII in Source Control:** No personal identifiable information, metrics, or diagnostic data stored locally in plain text or committed to Git.
 - **Secure Backend Handshake:** All mobile communications with `services/api` (FastAPI) must authenticate via signed access tokens and strict schema validation.
 - **Fail-Safe Child Containment:** Parent Mode must lock immediately on inactivity or backgrounding to prevent accidental access by the child.
 

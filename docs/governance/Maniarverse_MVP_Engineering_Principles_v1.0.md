@@ -1,42 +1,54 @@
+Maniarverse is not just a children’s app; its goal is to build a safe, calm, and non-verbal experience where the child does not feel pressured, judged, rushed, or controlled.
 
-Maniarverse فقط یک اپلیکیشن کودک نیست؛ هدفش ساختن یک تجربه امن، آرام و غیرکلامی است که کودک در آن احساس فشار، قضاوت، عجله یا کنترل نکند.
+The core principle of the project is:
 
-اصل مرکزی پروژه این است:
-ما برای جلب توجه طراحی نمی‌کنیم؛ برای ایجاد احساس امنیت، اعتماد و حضور طراحی می‌کنیم.
-در MVP، مانیار نباید کودک را قضاوت کند، ارزیابی کند، راهنمایی تحمیلی بدهد، جای والد را بگیرد، یا کودک را به تعامل مجبور کند. مانیار فقط همراه است: آرام، منتظر، مهربان و غیرمداخله‌گر.
+We do not design for attention capture; we design to create a sense of safety, trust, and presence.
 
-برای توسعه فنی، چند خط قرمز مهم داریم:
-1. MVP First  
-هر چیزی که برای MVP ضروری نیست فعلاً اضافه نمی‌شود.
+In the MVP, Maniar must not judge, evaluate, give intrusive guidance, take the place of the parent, or force interaction upon the child. Maniar is solely a companion: calm, patient, kind, and non-intrusive.
 
-2. Child First  
-هر تصمیم باید به نفع تجربه کودک باشد، نه صرفاً راحتی فنی یا زیبایی ظاهری.
+For technical development, we have several important red lines:
 
-3. Parent Trust  
-والد باید از ابتدا حس امنیت، شفافیت و کنترل داشته باشد.
+MVP First
 
-4. No Overengineering  
-قابلیت‌های آینده مثل Social Login، هوش مصنوعی پیشرفته، تحلیل رفتار، گیمیفیکیشن و امکانات اضافه فعلاً خارج از Scope هستند.
+Anything that is not essential for the MVP is excluded for now.
 
-5. Data Safety  
-داده کودک باید با حداقل‌گرایی، شفافیت و امنیت مدیریت شود. فایل‌ها در Storage ذخیره می‌شوند و دیتابیس فقط مسیر یا آدرس فایل را نگه می‌دارد.
+Child First
 
-6. No Lock-in  
-کد، دیتابیس، مستندات، Migrationها، Repository و سرویس‌ها باید طوری باشند که پروژه بعداً توسط توسعه‌دهنده دیگر هم قابل ادامه باشد.
+Every decision must benefit the child’s experience, rather than merely serving technical convenience or visual aesthetics.
 
-7. Documentation  
-API، دیتابیس، نصب و اجرای پروژه، envها و ساختار پروژه باید مستند شوند.
+Parent Trust
 
-لطفاً در طراحی Backend و Frontend همیشه این سؤال را چک کن:
-آیا این تصمیم تجربه کودک را آرام‌تر، امن‌تر، قابل اعتمادتر و ساده‌تر می‌کند؟
-اگر جواب نه است، احتمالاً برای MVP لازم نیست.
+Parents must feel a sense of security, transparency, and control from the very beginning.
 
-برای شروع توسعه، مرجع اجرایی ما این‌هاست:
-- MVP Scope و Acceptance Criteria
-- Character Bible
-- Calm World Bible
-- Coding Standards
-- Infrastructure Estimate
-- Contract
+No Overengineering
 
-اگر در هر بخش شک داشتی، قبل از پیاده‌سازی بپرس تا تصمیم در Decision Log ثبت شود.
+Future features such as Social Login, advanced AI, behavioral analysis, gamification, and extra utilities are out of scope for now.
+
+Data Safety
+
+Child data must be managed with minimalism, transparency, and security. Files are stored in Storage, and the database only stores the file path or URI.
+
+No Lock-in
+
+Code, database, documentation, migrations, repository, and services must be structured so that the project can easily be continued by another developer later.
+
+Documentation
+
+APIs, database setup and execution, environment variables (.env), and project structure must be thoroughly documented.
+
+In backend and frontend design, please always check this question:
+
+Does this decision make the child’s experience calmer, safer, more reliable, and simpler?
+
+If the answer is no, it is likely unnecessary for the MVP.
+
+To begin development, our executive references are:
+
+MVP Scope and Acceptance Criteria
+Character Bible
+Calm World Bible
+Coding Standards
+Infrastructure Estimate
+Contract
+If you have doubts in any section, please ask before implementation so the decision can be recorded in the Decision Log.
+

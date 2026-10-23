@@ -1,12 +1,13 @@
-# برنامه‌ریزی
+# Project Planning
 
-- **مسئول:** ……………
-- **نقش:** Scope، Acceptance Criteria، Milestones
-- **قرارداد مرتبط:** ……… (شماره و تاریخ)
-- **وضعیت کلی:** پیش‌نویس
+- **Owner:** Project Management & Planning Team
+- **Role:** Maintaining and updating the MVP scope, acceptance criteria, pilot readiness assessments, and risk registers strictly without personal data.
+- **Related Contract:** Maniarverse_MVP_Contract_v3.10
+- **Overall Status:** Proposed
 
-## خروجی‌ها
+## Deliverables
 
-| خروجی | هدف | تحویل‌دهنده | کامیت | تاریخ | وضعیت |
+| Deliverable | Purpose | Assignee | Commit | Date | Status |
 |---|---|---|---|---|---|
-| ……… | ……… | ……… | ……… | ……… | پیش‌نویس |
+| MVP Scope & Acceptance Criteria | Defining MVP boundaries and formal acceptance criteria | Product Management | - | - | Proposed |
+| Pilot Readiness & Risk Register | Assessing pilot readiness and tracking project risks | Project Management Team | - | - | Proposed |

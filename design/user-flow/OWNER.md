@@ -1,7 +1,7 @@
 # User Flows & Sitemaps Ownership
 
 ## Scope & Purpose
-This directory contains the official user flow diagrams, parental onboarding logic, and overarching application sitemaps for the Maniarverse platform. These artifacts bridge clinical sensory guidelines with technical navigation structures across the Parent Web Portal and Child Interactive Worlds.
+This directory contains the official user flow diagrams, parental onboarding logic, and overarching application sitemaps for the Maniarverse platform. These artifacts bridge sensory guidelines with technical navigation structures across the Parent Web Portal and Child Interactive Worlds.
 
 ---
 

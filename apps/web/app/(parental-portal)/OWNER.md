@@ -3,10 +3,10 @@
 ## 1. Ownership & Governance
 - **Scope:** Parental web portal including authentication (login, registration, password recovery), child profile management, family settings, growth insights, and memory capsule viewing.
 - **Assigned Team:** Web Frontend Development Team (Mahsa & Ali Ensafi) under contract **Maniarverse_MVP_Contract_v3.10**.
-- **Clinical & Psychological Advisory:** Dr. Akhgari (Psychological Consultant) — enforcing strength-based, non-stigmatizing language (strictly zero scores, rankings, or negative labels for children).
+- **Psychological Advisory:** Dr. Akhgari (Psychological Consultant) — enforcing strength-based, non-stigmatizing language (strictly zero scores, rankings, or negative labels for children).
 - **Product & UX/UI Oversight:** Hadis Alidokht (Product Designer).
 - **Compliance & Security:**
-  - **Zero Clinical PHI/PII:** Sensitive health and diagnostic clinical data must never be exposed or logged in frontend code.
+  - **Zero PHI/PII:** Sensitive health and diagnostic data must never be exposed or logged in frontend code.
   - **Token & Session Security:** Secure token storage via `lib/tokenStorage.ts` with authenticated handshakes to `services/api`.
 
 ## 2. Directory Structure & Key Routes
