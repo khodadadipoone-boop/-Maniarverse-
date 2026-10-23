@@ -8,6 +8,7 @@
 | **DL-002** | Requirement for Dynamic Child Personalization | Proposed | 2026-10-21 |
 | **DL-003** | Zero PHI/PII in Source Control & Storage Boundary | Accepted | 2026-10-21 |
 | **DL-004** | MVP Phase 1 Scope Limitation (Starter World, Memory Capsule & Parent Mode) | Proposed | 2026-10-21 |
+| **DL-005** | Parent Notification & Summary Policy | Proposed | 2026-10-23 |
 
 ---
 
@@ -84,3 +85,21 @@ To ensure rapid delivery, high stability, and focused evaluation during the init
 ### Consequences
 - Concentrates Unreal Engine efforts on perfecting tactile interaction in the simple world and core character animations of Maniar.
 - Keeps backend (`services/api`) models lean, focusing strictly on Authentication, Child Profiles, Sensory Settings, and Memory Gallery storage.
+
+---
+
+## DL-005: Parent Notification & Summary Policy
+
+- **Status:** Proposed
+- **Date:** 2026-10-23
+
+### Context
+Parents require constructive updates regarding their child's engagement and completed milestones within the platform, while strictly adhering to therapeutic boundaries (avoiding clinical judgment or automated behavioral interpretation of the child's mood).
+
+### Decision
+- **Notification Scope:** Push notifications and parent summaries (`services/api`) are restricted to administrative reminders, session completion alerts, and new memory capsule additions.
+- **Exclusion of Mood/Behavioral Indexing:** In strict alignment with Canon #053, system notifications must not generate or transmit direct interpretations of the child's emotional state or behavior (e.g., "today the child was calmer" is prohibited).
+
+### Consequences
+- Simplifies backend notification worker logic.
+- Ensures strict ethical and psychological compliance regarding automated child profiling.
