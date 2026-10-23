@@ -9,6 +9,7 @@
 | **DL-003** | Zero PHI/PII in Source Control & Storage Boundary | Accepted | 2026-10-21 |
 | **DL-004** | MVP Phase 1 Scope Limitation (Starter World, Memory Capsule & Parent Mode) | Proposed | 2026-10-21 |
 | **DL-005** | Parent Notification & Summary Policy | Proposed | 2026-10-23 |
+| **DL-006** | First Encounter Experience & State Policy | Proposed | 2026-10-23 |
 
 ---
 
@@ -103,3 +104,24 @@ Parents require constructive updates regarding their child's engagement and comp
 ### Consequences
 - Simplifies backend notification worker logic.
 - Ensures strict ethical and psychological compliance regarding automated child profiling.
+
+---
+
+## DL-006: First Encounter Experience & State Policy
+
+- **Status:** Proposed
+- **Date:** 2026-10-23
+
+### Context
+The platform requires a dedicated initial introductory moment when a child profile enters the world for the very first time, balancing gentle engagement without imposing sensory overload or clinical expectations.
+
+### Decision
+- **Definition & Classification:** Designated as **First Encounter**, treated as a core 3D Experience rather than a functional Use Case (per Architecture Review).
+- **Execution Rule:** Runs strictly **once** per child profile upon initial onboarding. Maniar enters calmly, performs a gentle wave (Gentle Wave), with zero expectation of response from the child, no text prompts, and no countdown timers.
+- **State Management:** Tracked solely via a lightweight boolean flag (`first_encounter_completed: true/false`) on the child profile schema. No timestamps or complex behavioral metrics are stored, complying with Canon #052.
+- **Subsequent Sessions:** In later logins, Maniar defaults to a normal waiting state (`WAIT`) with no repetitive welcome loops or day counters.
+- **Parental Controls:** The parent application (`apps/parent-mode`) must provide options to skip or re-trigger the First Encounter flow if necessary.
+
+### Consequences
+- Keeps backend profile models (`services/api`) extremely lean with a single boolean flag.
+- Ensures the Unreal Engine client (`apps/child-mode`) handles the initial intro deterministically without heavy telemetry or state overhead.
