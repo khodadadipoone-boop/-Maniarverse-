@@ -28,6 +28,16 @@
 | `HIST-004_Master_Doc_Final.md` | 2026-10-23 |
 | `HIST-005_Autism_Strategic_Roadmap.md` | 2026-10-23 |
 
+### قانون اساسی · Constitution — `docs/foundations/constitution/`
+چهار سند که هر کدام خود را مرجع بالادستی می‌دانند؛ تضادهایشان در `README.md` همان پوشه · Four documents each claiming top authority; conflicts listed in that folder's `README.md`.
+
+| سند · Document | نسخه · Version | وضعیت · Status | تاریخ منبع · Source date |
+|---|---|---|---|
+| `Maniar_Character_Bible_v3.0.md` | 3.0 | «قانون اساسی» (ادعای خود سند) · self-declared constitution | 2026-06-29 |
+| `Interaction_Bible_v1.0.md` | 1.0 | Not stated | 2026-06-28 |
+| `AI-001_Companion_Bible_v1.1.md` | 1.1 | Tier 5 Product Bible | 2026-08-23 |
+| `Maniar_Governance_Infrastructure.md` | — | SEALED | 2026-07-07 |
+
 ## ۲. تصمیم‌ها · Decisions — `docs/decisions/`
 
 | سند · Document | محتوا · Content | وضعیت · Status | آخرین تغییر · Last change |
@@ -92,7 +102,8 @@
 این اسناد در اکوسیستم مانیارورس وجود دارند یا برنامه‌ریزی شده‌اند، ولی در این ریپو پیدا نشدند. اگر خصوصی‌اند، عمداً بیرون مانده‌اند.
 These exist or are planned in the Maniarverse ecosystem but were not found here. If private, they are intentionally excluded.
 
-- قانون اساسی مانیارورس · Maniarverse Constitution
+- نسخه‌های ۵ ماده‌ای / ۸ ماده‌ای قانون اساسی (در درایو پیدا نشد) · Constitution 5-article / 8-article versions (not found in Drive)
+- MCP-001، CB-001، MV-001، MLA-000…MLA-009، UI-001، APS-1…APS-4 (ارجاع‌شده در اسناد قانون اساسی · referenced by constitution documents)
 - روش زبان سکوت · Silent Language Method
 - Foundations Method · Presence Method · PR-001 / PR-002 / PR-003
 - پرونده‌های پژوهشی · Research Dossiers RD-001 … RD-004 (MRDS)
