@@ -70,6 +70,7 @@
 | `RN-002_Silent_Language_Feasibility.md` — امکان‌سنجی زبان سکوت | پژوهش باز · Open research | 2026-10-23 |
 | `RN-003_Maniar_Calm_Podcast.md` | ⚠️ نیازمند بازنگری ادعاها · Claims need review before publishing | 2026-10-23 |
 | `RN-004_Success_World_B2_Translation_Matrix_v0.1.md` — دنیای موفقیت، ماتریس ترجمه B2 | پژوهش باز · Open research (draft v0.1, awaiting B3 review) | 2026-10-26 |
+| `RN-005_LOS_Master_Progress_Report_v0.1.md` — زبان سکوت (LOS)، گزارش وضعیت تا LOS-118 | پژوهش باز · Open research (working document v0.1) | 2026-10-26 |
 
 ## ۶. برند · Brand — `docs/brand/`
 
