@@ -1,5 +1,8 @@
 # MANIAR CHARACTER BIBLE v3.0
 
+> ⛔ **وضعیت: بایگانی‌شده (تاریخی) — طبق DL-007 دیگر مرجع اپلیکیشن نیست.** در هر تضاد، AI-001 Companion Bible و Interaction Bible مقدم‌اند.
+> **Status: Archived (historical) per DL-007 — no longer authoritative for the application.** AI-001 and the Interaction Bible prevail on any conflict.
+
 > **منبع · Source:** `Maniar_Character_Bible_v3.0_Final.pdf` — Google Drive (owner: Poone Khodadadi), created 2026-06-29
 > https://drive.google.com/file/d/1hbkGF13L5ZrLLpwO8ucqUdWsky5XeP0j/view
 > **بازنویسی · Transcription:** 2026-10-26. متن بدون تغییر محتوایی از PDF بازنویسی شده؛ فقط قالب‌بندی Markdown اضافه شده است.

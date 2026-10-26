@@ -10,6 +10,7 @@
 | **DL-004** | MVP Phase 1 Scope Limitation (Starter World, Memory Capsule & Parent Mode) | Proposed | 2026-10-21 |
 | **DL-005** | Parent Notification & Summary Policy | Proposed | 2026-10-23 |
 | **DL-006** | First Encounter Experience & State Policy | Proposed | 2026-10-23 |
+| **DL-007** | Constitutional Document Hierarchy | Accepted | 2026-10-26 |
 
 ---
 
@@ -125,3 +126,28 @@ The platform requires a dedicated initial introductory moment when a child profi
 ### Consequences
 - Keeps backend profile models (`services/api`) extremely lean with a single boolean flag.
 - Ensures the Unreal Engine client (`apps/child-mode`) handles the initial intro deterministically without heavy telemetry or state overhead.
+
+---
+
+## DL-007: Constitutional Document Hierarchy
+
+- **Status:** Accepted (approved by founder Poone Khodadadi, 2026-10-26)
+- **Date:** 2026-10-26
+
+### Context
+Four documents in `docs/foundations/constitution/` each claim top authority over Maniar's behavior, and they contradict each other on core points (see that folder's `README.md`). Most importantly, Maniar Character Bible v3.0 makes the watch colour reflect the child's emotional state and lists thumbs up/down as a signature move, while AI-001 Companion Bible forbids both for Companion Maniar. Without a single order of precedence the team builds from whichever document it reads, which already produced a parent dashboard that scored the child and displayed a mood label.
+
+### Decision
+Order of precedence, highest first. A lower document applies only where it does not contradict a higher one.
+1. **MF-000 Founder's Covenant** (`docs/foundations/MF-000_Founders_Covenant_*.md`) — values and purpose ("why").
+2. **AI-001 Companion Bible v1.1** (`docs/foundations/constitution/AI-001_Companion_Bible_v1.1.md`) — what Companion Maniar may say, may not say or do, and how it reacts inside the app.
+3. **Interaction Bible v1.0** (`docs/foundations/constitution/Interaction_Bible_v1.0.md`) — interaction details (first meeting, rituals, Memory Capsule, worlds, parent insight).
+4. **Maniar Character Bible v3.0** — **archived as a historical document.** It predates the Companion / Narrative Maniar split and is no longer authoritative for the application.
+
+Phase 1 product scope remains governed by the PRD and DL-004; engineering decisions (DL-001 … DL-006) must comply with this hierarchy.
+
+### Consequences
+- Companion Maniar's watch never shows the child's emotional state or any verdict, and the like/dislike gesture is not used in the application (AI-001 §2, §5). These remain Narrative Maniar (YouTube) conventions only.
+- The world list follows the Interaction Bible (Calm, Joy, Inner; Natural and Kindness as future worlds), limited by DL-004 to one starter world in Phase 1. Respect World from Character Bible v3.0 is not in scope.
+- Interaction Bible items that could imply pressure or evaluation (the morning "small challenge", emotion tags in Memory Capsule) must be reviewed against AI-001 §3 and §5 before implementation.
+- Any future constitutional document must state its place in this hierarchy.

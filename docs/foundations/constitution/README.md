@@ -15,7 +15,22 @@ This folder holds the documents that each declare themselves the constitution or
 
 اسناد مرتبط بیرون از این پوشه · Related, outside this folder: `../MF-000_Founders_Covenant_*.md`, `../MF-001_Founders_Charter.md` (شامل «قانون اساسی زنده» · includes the "Living Constitution" section).
 
-## ⚠️ تضادهای باز · Open conflicts (not resolved — founder decision required)
+## ✅ ترتیب اعتبار · Order of precedence — DL-007 (Accepted 2026-10-26)
+
+۱. MF-000 عهدنامه‌ی بنیان‌گذار · Founder's Covenant
+۲. AI-001 Companion Bible v1.1
+۳. Interaction Bible v1.0
+۴. Character Bible v3.0 — **بایگانی‌شده · archived (historical)**
+
+سند پایین‌تر فقط جایی اعتبار دارد که با سند بالاتر تضاد نداشته باشد · A lower document applies only where it does not contradict a higher one. See `docs/decisions/Decision_Log.md` → DL-007.
+
+## تضادها و وضعیتشان · Conflicts and their status
+
+- ۱، ۲، ۶ → **حل شد با DL-007 · Resolved by DL-007** (AI-001 prevails).
+- ۳ → **حل شد · Resolved:** فهرست دنیاها طبق Interaction Bible، محدود به DL-004.
+- ۴، ۵ → **باز · Open:** نیازمند بازبینی جزئیات · need detailed review.
+
+### جزئیات · Details
 
 ۱. **ساعت و تشخیص احساس · Watch and emotion detection.**
 Character Bible v3.0 (فصل ۴ و ۶): رنگ ساعت «بر اساس وضعیت عاطفی کودک» تغییر می‌کند. ↔ AI-001 §2، §4، §6: ساعت مانیارِ همراه هیچ حکمی نمی‌دهد و در لحظه‌های سخت «هیچ تغییر رنگی» ندارد؛ PRD فاز ۱: بدون تشخیص احساس و بدون سنسور.

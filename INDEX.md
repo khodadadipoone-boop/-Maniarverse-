@@ -12,8 +12,8 @@
 
 | سند · Document | نسخه · Version | وضعیت · Status | مالک · Owner | آخرین تغییر · Last change |
 |---|---|---|---|---|
-| `MF-000_Founders_Covenant_FA.md` — عهدنامه‌ی بنیان‌گذار | 0.1 | Living document | Poone Khodadadi | 2026-10-23 |
-| `MF-000_Founders_Covenant_EN.md` — Founder's Covenant | 0.1 | Living document | Poone Khodadadi | 2026-10-23 |
+| `MF-000_Founders_Covenant_FA.md` — عهدنامه‌ی بنیان‌گذار | 0.1 | Living document — rank 1 (DL-007) | Poone Khodadadi | 2026-10-23 |
+| `MF-000_Founders_Covenant_EN.md` — Founder's Covenant | 0.1 | Living document — rank 1 (DL-007) | Poone Khodadadi | 2026-10-23 |
 | `MF-001_Founders_Charter.md` — منشور مانیارورس | — | Not stated | Poone Khodadadi | 2026-10-23 |
 | `Product_Requirements_Phase1_v1.0.md` — PRD Phase 1 (MVP) | 1.0 | Not stated | Product (MahsaEnsafi) | 2026-10-24 |
 
@@ -33,16 +33,16 @@
 
 | سند · Document | نسخه · Version | وضعیت · Status | تاریخ منبع · Source date |
 |---|---|---|---|
-| `Maniar_Character_Bible_v3.0.md` | 3.0 | «قانون اساسی» (ادعای خود سند) · self-declared constitution | 2026-06-29 |
-| `Interaction_Bible_v1.0.md` | 1.0 | Not stated | 2026-06-28 |
-| `AI-001_Companion_Bible_v1.1.md` | 1.1 | Tier 5 Product Bible | 2026-08-23 |
+| `Maniar_Character_Bible_v3.0.md` | 3.0 | **Archived** (DL-007) | 2026-06-29 |
+| `Interaction_Bible_v1.0.md` | 1.0 | Authoritative — rank 3 (DL-007) | 2026-06-28 |
+| `AI-001_Companion_Bible_v1.1.md` | 1.1 | Authoritative — rank 2 (DL-007) | 2026-08-23 |
 | `Maniar_Governance_Infrastructure.md` | — | SEALED | 2026-07-07 |
 
 ## ۲. تصمیم‌ها · Decisions — `docs/decisions/`
 
 | سند · Document | محتوا · Content | وضعیت · Status | آخرین تغییر · Last change |
 |---|---|---|---|
-| `Decision_Log.md` | DL-001 تا DL-006 · DL-001 to DL-006 | DL-001 Accepted (Unreal Engine), DL-003 Accepted, others Proposed | 2026-10-23 |
+| `Decision_Log.md` | DL-001 تا DL-006 · DL-001 to DL-006 | DL-001, DL-003, DL-007 Accepted; others Proposed | 2026-10-23 |
 
 ## ۳. حاکمیت · Governance — `docs/governance/`
 
