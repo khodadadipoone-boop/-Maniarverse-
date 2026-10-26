@@ -32,7 +32,7 @@
 
 | سند · Document | محتوا · Content | وضعیت · Status | آخرین تغییر · Last change |
 |---|---|---|---|
-| `Decision_Log.md` | DL-001 تا DL-006 · DL-001 to DL-006 | DL-001: Proposed | 2026-10-23 |
+| `Decision_Log.md` | DL-001 تا DL-006 · DL-001 to DL-006 | DL-001 Accepted (Unreal Engine), DL-003 Accepted, others Proposed | 2026-10-23 |
 
 ## ۳. حاکمیت · Governance — `docs/governance/`
 
@@ -78,8 +78,8 @@
 |---|---|---|
 | `user-flow/UserFlow_v1.pdf` | 1.0 | **Deprecated** |
 | `user-flow/UserFlow_v2.pdf` | 2.0 | Active |
-| `user-flow/Sitemap_Maniarverse_v1.0.pdf` | 1.0 | Active (per root `OWNER.md`) |
-| `user-flow/Sitemap_Maniarverse_v2.0.pdf` | 2.0 | ⚠️ ثبت نشده در OWNER.md · Not registered in OWNER.md |
+| `user-flow/Sitemap_Maniarverse_v1.0.pdf` | 1.0 | **Deprecated** |
+| `user-flow/Sitemap_Maniarverse_v2.0.pdf` | 2.0 | Active |
 | `wireframes/Additional_UserFlows_Wireframes_LandingPage_v1.0.pdf` | 1.0 | Active |
 | `ui-kit/component/` — Badge, Button, Checkbox, Dropdown, Input Field, Message, Radio Button, Switch | 1.0 | Approved |
 | `ui-kit/color styles/` — Primary, Secondary, Semantic (Error, Info, Neutral, Success, Writing) | 1.0 | Active |

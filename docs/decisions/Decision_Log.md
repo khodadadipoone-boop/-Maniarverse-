@@ -4,7 +4,7 @@
 
 | ID | Title | Status | Date |
 |---|---|---|---|
-| **DL-001** | Core Technology Stack (Unreal Engine, FastAPI, Flutter) | Proposed | 2026-10-21 |
+| **DL-001** | Core Technology Stack (Unreal Engine, FastAPI, Flutter) | Accepted | 2026-10-21 |
 | **DL-002** | Requirement for Dynamic Child Personalization | Proposed | 2026-10-21 |
 | **DL-003** | Zero PHI/PII in Source Control & Storage Boundary | Accepted | 2026-10-21 |
 | **DL-004** | MVP Phase 1 Scope Limitation (Starter World, Memory Capsule & Parent Mode) | Proposed | 2026-10-21 |
@@ -15,7 +15,7 @@
 
 ## DL-001: Core Technology Stack
 
-- **Status:** Proposed
+- **Status:** Accepted (confirmed by founder Poone Khodadadi, 2026-10-26)
 - **Date:** 2026-10-21
 
 ### Context
