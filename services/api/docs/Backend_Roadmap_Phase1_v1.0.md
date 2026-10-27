@@ -18,15 +18,18 @@
 
 ## 2. Phase 1 Core Endpoints & Modules
 
-### 2.1. Parent Authentication & Account (`/api/v1/auth`)
+### 2.1. Parent Authentication & Account (`/auth`)
 - [x] Parent registration model and schema (`app/models/parent.py`, `app/schemas/parent.py`)
-- [ ] Sign up endpoint (`POST /api/v1/auth/register`)
-- [ ] Login / Token generation endpoint (`POST /api/v1/auth/login`)
-- [ ] Security dependencies & JWT token validation (`app/core/security.py`, `app/core/dependencies.py`)
+- [ ] Email registration endpoint (`POST /auth/register/email`)
+- [ ] Google registration/login endpoint (`POST /auth/google`)
+- [ ] Email login / token generation endpoint (`POST /auth/login`)
+- [ ] Password hashing and verification (`app/utils/security.py`)
+- [ ] Security dependencies & JWT token validation (`app/core/dependencies.py`)
+
 
 ### 2.2. Child Profile Management (`/api/v1/children`)
 - [x] Child database model (`app/models/child.py`) and schema (`app/schemas/child.py`)
-- [x] Alembic migration scripts for children and parents tables
+- [ ] Alembic migration scripts for children and parents tables
 - [ ] Create child profile endpoint (`POST /api/v1/children`) — linked to parent ID
 - [ ] List child profiles endpoint (`GET /api/v1/children`)
 
