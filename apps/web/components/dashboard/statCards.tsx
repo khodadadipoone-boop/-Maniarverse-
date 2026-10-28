@@ -1,10 +1,14 @@
 import {
-  HiOutlineFaceSmile,
-  HiOutlineClipboardDocumentCheck,
-  HiOutlineChartBar,
-  HiOutlineExclamationCircle,
+  HiOutlineSparkles,
+  HiOutlineHeart,
+  HiOutlineArchiveBox,
+  HiOutlineEnvelope,
 } from "react-icons/hi2";
 import { IconType } from "react-icons";
+
+// Constitution note: Companion Maniar never judges, scores or reads the child's
+// emotions. These cards describe shared time and the parent's own to-dos only —
+// no mood labels, no percentages, no completion targets for the child.
 
 interface StatCardProps {
   label: string;
@@ -43,40 +47,40 @@ const StatCards = () => {
   // TODO: replace with real data from API/context
   const stats: Omit<StatCardProps, "icon">[] = [
     {
-      label: "Mood Today",
-      value: "Happy",
-      description: "Feeling great this morning",
+      label: "Calm World visits",
+      value: "4 this week",
+      description: "Times your child chose to visit",
       iconBg: "bg-violet-100",
       iconColor: "text-violet-600",
     },
     {
-      label: "Today's Plan",
-      value: "3 of 5",
-      description: "Activities completed",
+      label: "A moment together",
+      value: "Evening wind-down",
+      description: "A gentle idea to share today",
       iconBg: "bg-blue-100",
       iconColor: "text-blue-600",
     },
     {
-      label: "Weekly Progress",
-      value: "78%",
-      description: "Goals on track",
+      label: "Memory Capsule",
+      value: "2 new",
+      description: "Family moments saved this week",
       iconBg: "bg-emerald-100",
       iconColor: "text-emerald-600",
     },
     {
-      label: "Needs Attention",
-      value: "1 item",
-      description: "Review pending request",
+      label: "For you",
+      value: "1 message",
+      description: "Waiting for your reply",
       iconBg: "bg-orange-100",
       iconColor: "text-orange-600",
     },
   ];
 
   const icons = [
-    HiOutlineFaceSmile,
-    HiOutlineClipboardDocumentCheck,
-    HiOutlineChartBar,
-    HiOutlineExclamationCircle,
+    HiOutlineSparkles,
+    HiOutlineHeart,
+    HiOutlineArchiveBox,
+    HiOutlineEnvelope,
   ];
 
   return (
