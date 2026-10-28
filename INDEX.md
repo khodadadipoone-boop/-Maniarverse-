@@ -12,8 +12,8 @@
 
 | سند · Document | نسخه · Version | وضعیت · Status | مالک · Owner | آخرین تغییر · Last change |
 |---|---|---|---|---|
-| `MF-000_Founders_Covenant_FA.md` — عهدنامه‌ی بنیان‌گذار | 0.1 | Living document — rank 1 (DL-007) | Poone Khodadadi | 2026-10-23 |
-| `MF-000_Founders_Covenant_EN.md` — Founder's Covenant | 0.1 | Living document — rank 1 (DL-007) | Poone Khodadadi | 2026-10-23 |
+| `MF-000_Founders_Covenant_FA.md` — عهدنامه‌ی بنیان‌گذار | 0.2 | Living document — rank 1 (DL-007) | Poone Khodadadi | 2026-10-28 |
+| `MF-000_Founders_Covenant_EN.md` — Founder's Covenant | 0.1 | Living document — rank 1 (DL-007) · ⚠️ behind FA v0.2, needs sync | Poone Khodadadi | 2026-10-23 |
 | `MF-001_Founders_Charter.md` — منشور مانیارورس | — | Not stated | Poone Khodadadi | 2026-10-23 |
 | `Product_Requirements_Phase1_v1.0.md` — PRD Phase 1 (MVP) | 1.0 | Not stated | Product (MahsaEnsafi) | 2026-10-24 |
 
